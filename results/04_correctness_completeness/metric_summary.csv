@@ -1,0 +1,7 @@
+﻿model,metric,evaluations,mean_score,result_label
+llama,completeness,756,0.7183862433862434,"AI-provisional, pending calibration"
+llama,correctness,756,0.7591269841269841,"AI-provisional, pending calibration"
+gc_llm,completeness,756,0.4636243386243386,"AI-provisional, pending calibration"
+gc_llm,correctness,756,0.48214285714285715,"AI-provisional, pending calibration"
+apertus,completeness,756,0.6798941798941799,"AI-provisional, pending calibration"
+apertus,correctness,756,0.6891534391534392,"AI-provisional, pending calibration"
