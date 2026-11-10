@@ -1,0 +1,78 @@
+{
+  "queue_id": "mixed_temperature_three_model_queue_v1",
+  "source_workbook": "data/incoming/mixed_temperature_three_model/canadianness_756_three_model_answers_MIXED_TEMPERATURE_COMPLETE.xlsx",
+  "source_workbook_sha256": "2c28b3a8aadda242394e047b092a2c25913844ea498f2207a72a869710e6dd15",
+  "order": [
+    "llama",
+    "gc_llm",
+    "apertus"
+  ],
+  "run_ids": [
+    "llama_mixed_temperature_workbook_c4_20261107_v2",
+    "gc_llm_mixed_temperature_workbook_c4_20261107_v2",
+    "apertus_mixed_temperature_workbook_c4_20261107_v2"
+  ],
+  "prerequisite_run": "apertus_full_as_generated_c4_20261107_v2",
+  "questions_per_model": 756,
+  "metric_tasks_per_model": 1814,
+  "total_metric_tasks": 5442,
+  "concurrency": 4,
+  "monitor_interval_seconds": 600,
+  "software_sha256": {
+    "src/canadianness_eval/queued_workbook.py": "ea0adba975391831f32b2a7c957b4b0b8c7314c00f3ba9378b834ea0ef49e237",
+    "src/canadianness_eval/concurrent_research.py": "e9c289543cd691b36d4ffb7034c28cb5a1ca0b3a7f5403d0f1e330e621a9b6fc"
+  },
+  "rubric_sha256": "bb9889807b7babc8feed6a97ddd0c12c0fa334627e5d295017167fbd0a767cb2",
+  "evaluator_template_sha256": "ecb714aa746f7bdce82d86fd9bcc288d4e26ffd15cfa210bbd19a356e095793f",
+  "source_provenance": [
+    [
+      "field",
+      "value"
+    ],
+    [
+      "type",
+      "user_authorized_cross_run_replacement"
+    ],
+    [
+      "source_file",
+      "/fs/vnas_Hssc/dsai/vib000/canai_projects/llm_evals/reruns/consistent_1024_20261106T144122Z/outputs/exports/gc_llm_756_evaluation_1024_tokens_raw.jsonl"
+    ],
+    [
+      "source_file_sha256",
+      "f4dcd81ade9652d9bcadffb47aef41d04d7cde0a1cf58c98bdc905940caa7a4c"
+    ],
+    [
+      "source_run_id",
+      "20261106T144233Z-f941260c"
+    ],
+    [
+      "source_fingerprint",
+      "640fe65ed8741d767ba1477e0931e8c34fdf7536cfa0adbef131edc75ed7d94f"
+    ],
+    [
+      "source_temperature",
+      "0.0"
+    ],
+    [
+      "target_run_id",
+      "20261107T013759Z-335ed0b2"
+    ],
+    [
+      "target_temperature",
+      "0.7"
+    ],
+    [
+      "reason",
+      "User authorized filling the single empty answer with the earlier temperature-zero GC-LLM answer."
+    ]
+  ],
+  "gc_temperature_question_counts": {
+    "0.7": 755,
+    "0": 1
+  },
+  "gc_reused_answers": 1,
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false,
+  "result_label": "AI-provisional, pending calibration"
+}

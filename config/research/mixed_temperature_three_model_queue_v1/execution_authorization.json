@@ -1,0 +1,12 @@
+{
+  "status": "EXECUTION_AUTHORIZED",
+  "authorized_at": "2026-11-07T02:50:03.218849+00:00",
+  "authorized_by": "User instruction in this conversation",
+  "queue_manifest_sha256": "1dac8a0f402425b25b0a5a94278af835427f3f1bf170f933b69bae51937fed59",
+  "verbatim_instruction": "This file contains all the 3 models answers, run its evaluation 1 by 1 after this job is done! Be checking every 10 minutes to ensure there is no error and if there is fix it and let it continue.",
+  "scope": "Three complete as-supplied workbook research runs in queue order, plus identical-configuration failed/missing-task recovery",
+  "execution_authorized": true,
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false
+}
