@@ -1,0 +1,19 @@
+{
+  "successful": 1512,
+  "failed": 0,
+  "pending": 0,
+  "planned": 1512,
+  "scoring_http_attempts": 1512,
+  "http_status_counts": {
+    "200": 1512
+  },
+  "api_reported_tokens": {
+    "completion_tokens": 986543,
+    "prompt_tokens": 3970000,
+    "total_tokens": 4956543
+  },
+  "raw_files_without_metric_checkpoint": [],
+  "usage_missing_events": 0,
+  "no_overall_combined_score": true,
+  "result_label": "AI-provisional, pending calibration"
+}
