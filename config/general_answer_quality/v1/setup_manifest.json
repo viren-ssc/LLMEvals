@@ -1,0 +1,66 @@
+{
+  "setup_id": "general-answer-quality-cleaned-v1",
+  "status": "WAITING_FOR_USER_STEPS_AND_RUBRIC",
+  "source_jsonl": "data/incoming/cleaned_three_model/Canadian_ness_Three_Models_Cleaned_for_Evaluation.jsonl",
+  "source_jsonl_sha256": "c5490703a827764f63e0ce436f098365fcec8c7981c362a7062bb32022344610",
+  "cleaned_dataset_unmodified": true,
+  "questions": 756,
+  "models": [
+    "llama",
+    "gc_llm",
+    "apertus"
+  ],
+  "metrics": [
+    "correctness",
+    "completeness"
+  ],
+  "tasks_per_model": 1512,
+  "total_metric_tasks": 4536,
+  "language_questions": {
+    "fr": 352,
+    "en": 404
+  },
+  "tasks_per_model_and_metric": {
+    "llama": {
+      "correctness": 756,
+      "completeness": 756
+    },
+    "gc_llm": {
+      "correctness": 756,
+      "completeness": 756
+    },
+    "apertus": {
+      "correctness": 756,
+      "completeness": 756
+    }
+  },
+  "definitions_file": "config/general_answer_quality/v1/metrics_user_supplied.json",
+  "shared_definitions_required": true,
+  "scoring_implementation": "Existing DeepEval GEval/fixed-rubric factory and authenticated judge gateway; no new scorer",
+  "deepeval_version": "4.3.2",
+  "preferred_concurrency": 4,
+  "judge_model": "gpt-oss-120b",
+  "judge_inference_settings_status": "Not newly frozen; must be identical across all three models before execution",
+  "no_answers_regenerated": true,
+  "no_other_model_answers_or_prior_scores_in_prepared_cases": true,
+  "original_canadianness_assignments_preserved_as_metadata": true,
+  "new_metrics_have_no_primary_secondary_role": "Both planned for all 756 questions per model; original roles retained only as provenance",
+  "evaluation_steps_provided": false,
+  "rubric_provided": false,
+  "execution_authorized": false,
+  "execution_guard": "No scoring or queue-entry command exists in this setup module; user definitions and explicit execution instruction required before scoring",
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false,
+  "result_label": "AI-provisional, pending calibration",
+  "software_sha256": {
+    "C:\\Users\\BhanderV\\Desktop\\LLMEvals\\src\\canadianness_eval\\general_quality_setup.py": "cfdbe79b43cd513df084297d32d504bef383727faf9dd0810b9ce2c7e715c702"
+  },
+  "prepared_input_sha256": {
+    "data/processed/general_answer_quality_cleaned_v1/planned_tasks.jsonl": "bd96b225616bf7e04fd92e3719da8c7a86e424d3ec7251d87a3e75df20cc3679",
+    "data/processed/general_answer_quality_cleaned_v1/shared_question_evidence.jsonl": "e8f865b2a7a4499323f3ad2e1c6316c24243a47a0b6b322add396bac1f5629a0",
+    "data/processed/general_answer_quality_cleaned_v1/apertus/cases.jsonl": "533ab7255c2d31fbca9baf69a7779527593976dff4ceb3952cd8295f980fae65",
+    "data/processed/general_answer_quality_cleaned_v1/gc_llm/cases.jsonl": "d1bf2e70ecf3fbaaf3bc43c7ad1c05aaaadcc666d4681ede9cb7d7b9291520ed",
+    "data/processed/general_answer_quality_cleaned_v1/llama/cases.jsonl": "993a2080c5d83a608caff7bee53325f85434405eee232f6cf2b09929b34454f2"
+  }
+}

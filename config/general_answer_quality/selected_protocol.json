@@ -1,0 +1,6 @@
+{
+  "protocol_path": "config\\general_answer_quality\\2026-11-07-user-v1\\experiment.json",
+  "experiment_sha256": "b1797408a95cf0871fdd5df781d210bb174174ce6a899d6aa3855fe3104ad0ce",
+  "execution_approval_path": "config\\general_answer_quality\\2026-11-07-user-v1\\execution_approval.json",
+  "supersedes_unpopulated_setup": "config/general_answer_quality/v1/setup_manifest.json"
+}

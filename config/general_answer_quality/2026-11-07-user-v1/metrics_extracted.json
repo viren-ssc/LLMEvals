@@ -1,0 +1,102 @@
+{
+  "version": "2026-11-07-proposed-v1",
+  "metrics": [
+    {
+      "metric_id": "correctness",
+      "name": "Answer Correctness",
+      "criteria": "Accuracy of the distinct substantive factual claims the model actually makes when answering the question. Score factual errors and misleading conclusions, not whether every required item is included.",
+      "scope_exclusions": "Omissions and required-element coverage belong to Answer Completeness. Correct optional facts count for factual accuracy; incorrect extra facts can reduce correctness. Repetition is deduplicated analytically, not rewarded or penalized.",
+      "evaluation_steps": [
+        "Identify the central factual question or decision the Input asks the model to address. Read the Actual Output as the model's answer; disregard wording, length and duplicated text when determining distinct content.",
+        "Extract each distinct, substantive factual claim in the Actual Output. Separate the central answer or conclusion from relevant supporting or additional claims; count an exactly repeated claim only once.",
+        "Compare the distinct claims with the Expected Output and Context. Label each as supported/correct, contradicted/incorrect, or not verifiable from the supplied evidence. Accept factually equivalent wording and valid alternative answers; a missing citation or absent evidence is not itself a contradiction.",
+        "Evaluate whether the central conclusion is factually correct and whether any additional incorrect claims materially mislead. Weight errors by significance; do not automatically assign the lowest score for one minor ancillary error.",
+        "Assess qualifications, uncertainty, refusals and clarification requests against the Input and evidence. Give credit when uncertainty or abstention is warranted; an off-topic reply, empty refusal or response that merely restates the question without giving any factual answer is a non-answer. If the reference and Context conflict, flag the limitation rather than inventing a resolution.",
+        "Select the 0–10 correctness band using the accuracy and impact of factual claims, not how many required items were supplied. Explain the decisive correct and incorrect claims and flag unresolved evidence. Do not penalize omissions, optional detail, style, language choice or repetition under this metric."
+      ],
+      "rubric_0_to_10": [
+        {
+          "min": 0,
+          "max": 2,
+          "expected_outcome": "The central answer is false or contradicted and little or no relevant factual substance is correct; or the response is off-topic, content-free, unjustifiably refuses an answerable question, or merely repeats the question's premise without supplying any answer. A decisive error or absence of a substantive answer makes the response fundamentally wrong."
+        },
+        {
+          "min": 3,
+          "max": 4,
+          "expected_outcome": "The response contains meaningful correct information but also a materially false central claim, required factual condition or conclusion. The mixture of correct and incorrect content makes its substantive answer unreliable."
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "expected_outcome": "The central answer is largely correct, but one or more identifiable factual errors, misleading qualifications or consequential mistakes in supporting details weaken its reliability without overturning the main answer."
+        },
+        {
+          "min": 7,
+          "max": 8,
+          "expected_outcome": "The central answer is correct and no material falsehood changes its meaning. Any remaining problems are minor factual imprecision or noncritical ancillary inaccuracies; valid equivalents and appropriate qualifications receive credit."
+        },
+        {
+          "min": 9,
+          "max": 10,
+          "expected_outcome": "Every distinct material claim that can be verified is factually correct and the response contains no misleading contradictory statements. A concise answer, valid alternative or justified uncertainty can receive full credit; omitted required information is scored only by Completeness."
+        }
+      ],
+      "required_evaluation_params": [
+        "INPUT",
+        "ACTUAL_OUTPUT",
+        "EXPECTED_OUTPUT",
+        "CONTEXT"
+      ]
+    },
+    {
+      "metric_id": "completeness",
+      "name": "Answer Completeness",
+      "criteria": "Coverage of the minimum information genuinely required to answer the question, including all core elements and necessary qualifications. Do not reward optional background or verbosity.",
+      "scope_exclusions": "Distinct claims unrelated to required elements do not lower completeness, even if wrong; correctness assesses them. A wrong or self-contradictory statement of a required element does not count as adequate coverage.",
+      "evaluation_steps": [
+        "Determine the minimum set of information required to satisfy the Input, before examining how much the Actual Output says. Use the Expected Output and Context as evidence; separate core requested elements and genuinely necessary conditions/qualifications from optional background, examples and reference elaboration.",
+        "For every required element, identify whether the Actual Output conveys it fully, partially or not at all. Accept concise semantic equivalents, alternative correct formulations and the requested degree of specificity; mere term mentions or factually contradictory statements do not establish coverage.",
+        "For multi-part, list, conditional, comparison and time- or jurisdiction-specific questions, check each independently required part and any qualifier necessary to avoid changing the answer's meaning. Do not invent requirements not implied by the Input.",
+        "Assess omissions by their importance to satisfying the question: missing a core element matters more than missing a minor necessary detail. If extra claims are unrelated to the required answer elements, leave their correctness to the Correctness metric; do not reward or penalize optional elaboration.",
+        "Consider whether an appropriately qualified answer, clarification or abstention fully meets a genuinely ambiguous or unanswerable question. Flag missing, outdated or conflicting reference evidence and do not fabricate answer requirements or assume Context was provided to the tested model.",
+        "Select the 0–10 completeness band from the coverage of required elements and explain the specific items covered, partial or missing. Ignore answer length, repetition, copied phrasing and stylistic differences; a brief answer can earn full credit when it is sufficient."
+      ],
+      "rubric_0_to_10": [
+        {
+          "min": 0,
+          "max": 2,
+          "expected_outcome": "None, or almost none, of the essential information requested by the question is meaningfully covered. The answer is generic, unrelated, unjustifiably refuses an answerable question or omits essentially the whole substantive answer."
+        },
+        {
+          "min": 3,
+          "max": 4,
+          "expected_outcome": "Some required information is present, but one or more major core elements are entirely absent or inadequately conveyed. The answer is fragmentary and fails to satisfy a substantial part of the question."
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "expected_outcome": "The main request is substantially addressed, but a core element is only partially covered or an important necessary condition, distinction or qualification is missing. The answer is useful yet materially incomplete."
+        },
+        {
+          "min": 7,
+          "max": 8,
+          "expected_outcome": "All core requested elements are covered and the answer meets the principal information need. Only small gaps in genuinely necessary supporting details or minor qualifications remain; optional background is not required."
+        },
+        {
+          "min": 9,
+          "max": 10,
+          "expected_outcome": "Every core requested element and necessary qualification is sufficiently covered, including any required parts, scope, timing or distinctions. Correct concise equivalents receive full credit; optional examples, length and elaboration are not required."
+        }
+      ],
+      "required_evaluation_params": [
+        "INPUT",
+        "ACTUAL_OUTPUT",
+        "EXPECTED_OUTPUT",
+        "CONTEXT"
+      ]
+    }
+  ],
+  "common_scoring_rules": "- The same fixed definitions, scoring bands, judge model/configuration, input fields, normalization and logging must apply to Llama, GC LLM and Apertus.\n- Use judge-side Input, Actual Output, Expected Output and Context. Context is evidence for evaluation, not proof that the tested model saw it.\n- Unverified is not the same as false. If supplied evidence is inadequate to adjudicate a material claim, flag it for evidence/human review instead of inventing certainty.\n- Neither metric measures repetition, truncation, fluency, response length or general instruction-following as an independent quality defect; retain those as separate diagnostics.\n- Score on a 0–10 rubric. Normalize raw 0–10 results to 0–1 once; if the scorer already returns 0–1, never divide by 10 again. Do not blend these two scores into the existing seven Canadian-ness metrics.\n- An original and a repetition-cleaned response are distinct experimental conditions; never replace the former and never revise the reference answer to favor a model.\n- Select a lower integer within the band for more severe problems and a higher integer for milder problems; score 10 is allowed for a minimal sufficient answer.\n- A material contradiction between Expected Output and Context, or an uncheckable decisive claim, should be flagged for evidence review; do not present the numeric judgment as independently verified ground truth.",
+  "declared_definition_sha256": "a92693de355475a2a061442e6268345fcf8f938c16cc9478bfb023566e05f1a2",
+  "source_markdown_sha256": "4d4c49fcba9666b22676bc36f408dd71676621873c148c038d49eb0d72d88294"
+}

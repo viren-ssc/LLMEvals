@@ -1,0 +1,19 @@
+{
+  "protocol_id": "general-answer-quality-user-defined-v1",
+  "status": "WAITING_FOR_USER_STEPS_AND_RUBRIC",
+  "definitions_supplied_by": null,
+  "shared_among_all_models": true,
+  "metrics": [
+    {
+      "metric_id": "correctness",
+      "evaluation_steps": null,
+      "rubric": null
+    },
+    {
+      "metric_id": "completeness",
+      "evaluation_steps": null,
+      "rubric": null
+    }
+  ],
+  "dynamic_step_generation_allowed": false
+}

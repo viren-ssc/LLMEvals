@@ -1,0 +1,14 @@
+{
+  "status": "EXECUTION_AUTHORIZED",
+  "execution_authorized": true,
+  "authorized_at": "2026-11-07T16:31:52.192706+00:00",
+  "authorized_by": "User: explicit instruction in this conversation",
+  "experiment_sha256": "b1797408a95cf0871fdd5df781d210bb174174ce6a899d6aa3855fe3104ad0ce",
+  "verbatim_instruction": "This file contains the evaluation steps and rubric for our two metrics, read it carefully, extract it and start the queue for all 3 models on the 2 additional metrics and use it on the cleaned data that we have",
+  "source_markdown_sha256": "4d4c49fcba9666b22676bc36f408dd71676621873c148c038d49eb0d72d88294",
+  "scope": "One 4,536-task provisional cleaned-data experiment plus identical-configuration failed/missing-task resumption",
+  "user_definition_execution_permission": true,
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false
+}
