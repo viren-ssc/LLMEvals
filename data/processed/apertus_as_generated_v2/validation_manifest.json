@@ -1,0 +1,20 @@
+{
+  "status": "VALID",
+  "questions": 756,
+  "unique_questions": 756,
+  "nonempty_unchanged_answers": 756,
+  "excel_jsonl_answers_identical": true,
+  "metric_tasks": 1814,
+  "primary": 756,
+  "secondary": 1058,
+  "language_questions": {
+    "fr": 352,
+    "en": 404
+  },
+  "termination_questions": {
+    "stop": 432,
+    "length": 324
+  },
+  "source_jsonl_sha256": "5556647e09e5948f7dc9be21abb48e6613d1bbc3c18502848b30c1e39eec7601",
+  "experiment_sha256": "9521ca4bb4717224e62a17ee5dbe847217e8a5851a5e991edcbeb6829c5240e0"
+}

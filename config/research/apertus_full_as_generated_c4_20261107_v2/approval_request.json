@@ -1,0 +1,10 @@
+{
+  "status": "PENDING_EXECUTION_AUTHORIZATION",
+  "run_id": "apertus_full_as_generated_c4_20261107_v2",
+  "experiment_sha256": "9521ca4bb4717224e62a17ee5dbe847217e8a5851a5e991edcbeb6829c5240e0",
+  "required_confirmation": "I authorize run apertus_full_as_generated_c4_20261107_v2: 1,814 apertus metric evaluations using the locked v2 configuration, labelled AI-provisional, pending calibration. This is execution permission only, not scientific or team approval.",
+  "execution_authorized": false,
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false
+}
