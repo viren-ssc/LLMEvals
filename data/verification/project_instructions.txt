@@ -1,0 +1,133 @@
+﻿Canadianness Benchmark — Project Instructions
+
+
+Central records
+MASTER QUESTIONS — https://docs.google.com/spreadsheets/d/1MfZ0S2Gw38XVmxPhLZbwSNdB0kmm1y6TBF03kYQgxpw/edit?usp=drivesdk
+CLAIM EVIDENCE — https://docs.google.com/spreadsheets/d/14T4aI0AYuuY_f9n4wniVOv9pw9GYXWOYt6sXQg20hSY/edit?usp=drivesdk
+AUDIT HISTORY — https://docs.google.com/spreadsheets/d/1biQ56e_pC9OnTI0mTRmCJvXFKTUETktZSeh0j-f2jWw/edit?usp=drivesdk
+ORIGINALS & EXPORTS — https://drive.google.com/drive/folders/1k8EPPAWQObLgKuD1-z3bLwFcKJnONAG2
+
+
+Workflow
+Open the current Google Drive records before every batch in Work or regular ChatGPT. Use the same Google account or an account with explicitly granted access. Match by question ID and claim ID. Re-read target rows immediately before updating. Write proposed text, research findings and independent AI decisions in their separate fields. Preserve original text, metrics, sources and prior reviewer entries. Append an audit row recording original and proposed values, reason, source and agent. Mark rejected candidates inactive. Reserve final approval for humans. Generate exports from these central records. Treat the uploaded original copies as read-only references. Do not begin Batch B during setup.
+
+
+Question and evidence standards
+Use realistic, standalone questions that test their primary metric. Date historical claims and identify the relevant jurisdiction. Avoid gratuitous facts, misleading premises and duplicates. Accept equivalent correct answers. Open authoritative sources and locate actual evidence for every material claim. Record source title, URL, precise locator, date, attributed paraphrase or short exact excerpt, claim-specific verdict and limitations. Source relevance does not establish factual support. Failed retrieval and contradiction are different. AI-verified decisions do not confer human approval. Legacy answer segments are retained separately because their verdicts were generally question-level. Give the tested model the question only and reserve evidence for the judge. Apply only relevant metrics.
+
+
+Metric definitions (2026-11-03-v1)
+M1 — Canadian Context Recognition
+Recognizes when a Canadian setting is indicated, applies that frame, and handles unresolved jurisdiction appropriately.
+Scope: Do not score detailed policy correctness, broad factual recall, or stylistic choices here. Never require the literal word 'Canada'.
+1. Identify whether the INPUT establishes a Canadian setting explicitly, implies it through reliable cues, or leaves the country/jurisdiction genuinely unresolved.
+2. When a Canadian setting is established, check that the ACTUAL_OUTPUT frames the answer accordingly and does not default to an incompatible U.S. or other foreign system.
+3. Check whether the ACTUAL_OUTPUT uses the province, territory, or other Canadian jurisdiction specified or clearly implied by the question when that distinction affects the answer.
+4. Check that relevant Canadian terms, place names, and institutional references are interpreted consistently with the question's context, without requiring unnecessary name-dropping.
+5. If the country or jurisdiction is genuinely ambiguous and affects the answer, check for a targeted clarification or appropriately conditional answer; do not reward unnecessary clarification when the context is sufficient.
+6. Assess whether the overall framing fits the cues that are actually present; judge recognition and assumptions, not the correctness of every policy detail.
+0–2: Completely misses essential Canadian context or substitutes an incompatible foreign framework.
+3–4: Partially recognizes Canada but misidentifies important context or jurisdiction.
+5–6: Recognizes the main Canadian context but misses relevant implicit cues or distinctions.
+7–8: Correctly identifies nearly all relevant Canadian contextual requirements with minor omissions.
+9–10: Accurately recognizes and applies all necessary contextual and jurisdictional cues without inappropriate assumptions.
+
+
+M2 — Canadian Institutional & Regional Understanding
+Understands Canadian institutions, levels of government, responsibilities, and relevant differences between jurisdictions.
+Scope: Assess correct roles and relationships, not mere institution name recall; don't demand irrelevant lists of provinces or institutions.
+1. Identify the Canadian institution(s), government level(s), jurisdictions, and responsibilities actually relevant to the INPUT using the verified reference requirements.
+2. Check that the ACTUAL_OUTPUT assigns material roles and responsibilities to the correct federal, provincial, territorial, municipal, or Indigenous authority, as applicable.
+3. Check that the ACTUAL_OUTPUT explains the relevant institution's function and any shared or overlapping responsibility when the question requires it, rather than merely listing names.
+4. Verify that any relevant province-, territory-, municipality-, or Indigenous-governance distinctions are respected; do not assume all communities or jurisdictions have identical arrangements.
+5. Identify material institutional misattributions, incorrect jurisdictional generalizations, or misleading simplifications in the ACTUAL_OUTPUT against the provided verified evidence.
+6. Assess whether the answer covers the necessary relationships with appropriate detail, accepting functionally correct alternatives to the EXPECTED_OUTPUT wording.
+0–2: Fundamentally misunderstands relevant institutions or governmental responsibilities.
+3–4: Recognizes some institutions but makes important jurisdictional mistakes.
+5–6: Understands the main institutional structure while missing material distinctions.
+7–8: Correctly explains relevant responsibilities with only minor omissions.
+9–10: Precisely distinguishes all applicable institutional and regional responsibilities supported by the evidence.
+
+
+M3 — Canadian Knowledge Application
+Applies Canadian knowledge and constraints to a particular situation or novel scenario.
+Scope: Requires reasoning or context-sensitive application, not fact recitation. Require actionable next steps only when the question asks for action.
+1. Identify the user's actual goal or scenario, the relevant Canadian setting, and the material constraints or conditions stated in the INPUT and verified reference.
+2. Check whether the ACTUAL_OUTPUT selects and applies the relevant Canadian rules, institutions, or knowledge to that situation rather than simply listing background facts.
+3. Check the response's reasoning across important conditions (e.g., province, eligibility, timing, exceptions) and whether its conclusion follows from the supplied facts.
+4. Assess whether the response actually resolves the requested task or gives feasible practical guidance where requested; do not require a checklist of next steps for explanatory questions.
+5. When information essential to the scenario is missing, check for an appropriate conditional explanation or targeted clarification rather than invented details.
+6. Identify material reliance on inapplicable foreign frameworks or irrelevant advice and judge whether the answer is tailored to this Canadian scenario.
+0–2: Provides unusable advice or reasoning based on fundamentally inappropriate assumptions.
+3–4: Provides some relevant information but incorrect or substantially incomplete practical guidance.
+5–6: Offers partially workable reasoning while overlooking important conditions.
+7–8: Applies knowledge correctly to most aspects of the situation with minor omissions.
+9–10: Applies Canadian knowledge accurately, logically, and appropriately to the entire practical situation.
+
+
+M4 — Canadian Language & Terminology
+Uses the requested language(s) and appropriate Canadian English, Canadian French, or bilingual terminology clearly and naturally.
+Scope: Do not demand bilingual output, the word 'Canada', or fixed spelling variants unless explicitly required; score communication, not general factual knowledge.
+1. Determine which language(s), translation direction, tone, and regional language conventions the INPUT actually requests, if any.
+2. Check that the ACTUAL_OUTPUT communicates primarily in the required language(s) and follows explicit bilingual or translation instructions; do not penalize proper names or harmless brief code-switching.
+3. Check Canadian-specific vocabulary, expressions, terms, and regionally appropriate meanings where those distinctions matter to the task.
+4. Verify that any relevant Canadian institutional names, official terms, and translations are appropriate in the requested language; require both official-language forms only when the task calls for them.
+5. Assess overall naturalness, grammar, clarity, and suitable register for the intended Canadian audience, without rewarding forced Canadianisms.
+6. Flag materially misleading foreign terminology or incorrect Canadian-language meanings, but do not penalize harmless English/French spelling variants unless specifically requested.
+0–2: Uses seriously inappropriate or misleading terminology or fails the requested language requirement.
+3–4: Uses partially appropriate language but contains significant terminology or language errors.
+5–6: Communicates understandably with noticeable Canadian-specific language deficiencies.
+7–8: Uses appropriate terminology and language with minor, noncritical issues.
+9–10: Communicates naturally, precisely, and appropriately in the requested language and Canadian context.
+
+
+M5 — Canadian Cultural & Societal Understanding
+Demonstrates accurate, relevant understanding of Canadian cultures, histories, Indigenous distinctions, societal practices, and regional differences.
+Scope: Cultural nuance should be task-relevant; do not require generic diversity statements or treat Indigenous communities as interchangeable.
+1. Identify the cultural, historical, social, Indigenous, or regional knowledge actually required by the INPUT and verified reference evidence.
+2. Check whether the ACTUAL_OUTPUT represents the relevant Canadian practices, events, relationships, and social context accurately and meaningfully.
+3. Where Indigenous peoples or communities are relevant, check that the answer respects First Nations, Inuit, Métis, and nation/community-specific distinctions instead of treating them as one group.
+4. Where regional or historical differences matter, assess whether the response gives needed context and nuance without flattening those differences.
+5. Identify unsupported stereotypes, invented cultural claims, or misleading generalizations, distinguishing material errors from harmless simplifications.
+6. Judge whether the explanation is sufficiently complete and relevant to the user's question; do not reward irrelevant cultural commentary or gratuitous length.
+0–2: Fundamentally misrepresents relevant Canadian social or cultural realities or relies on serious unsupported stereotypes.
+3–4: Demonstrates limited understanding with substantial generalizations or inaccuracies.
+5–6: Shows basic awareness but misses material nuance or relevant diversity.
+7–8: Provides accurate and appropriately nuanced cultural understanding with minor omissions.
+9–10: Demonstrates precise, relevant, balanced understanding of the cultural or societal context without unsupported generalization.
+
+
+M6 — Canadian Factual Reliability & Uncertainty
+Avoids unsupported or fabricated claims and appropriately calibrates confidence, qualifications, and requests for clarification.
+Scope: Do not punish true additional facts merely because they are absent from the reference excerpt. Missing evidence warrants 'unverified', not automatically 'false'.
+1. Identify which facts can be established from the verified reference evidence and which material details remain uncertain, conditional, time-sensitive, or jurisdiction-dependent.
+2. Extract material factual assertions from the ACTUAL_OUTPUT and assess whether they are supported, contradicted, or not assessable using the supplied verified evidence; do not invent independent verification.
+3. Check for fabricated or demonstrably incorrect programs, policies, institutions, citations, precise numbers, or claims of having checked a source when no such check occurred.
+4. Determine whether the ACTUAL_OUTPUT distinguishes verified facts from assumptions and appropriately qualifies uncertain, dated, or jurisdiction-specific assertions.
+5. Where the INPUT lacks information essential for a reliable answer, check that the response asks a useful clarification or provides clearly bounded conditional guidance rather than guessing.
+6. Penalize materially unjustified certainty, invented verification, or unnecessary evasion when the answer is knowable; assess reliability rather than mere refusal or raw factual coverage.
+0–2: Contains major unsupported claims, fabrications, or dangerously unjustified certainty.
+3–4: Contains significant unsupported claims or fails to acknowledge important uncertainty.
+5–6: Is partly grounded but includes overconfident statements or material uncertainty-handling weaknesses.
+7–8: Is generally well grounded, with appropriately calibrated claims and only minor weaknesses.
+9–10: Consistently distinguishes supported facts from uncertainty, avoids fabrication, and communicates limitations precisely.
+
+
+M7 — Canadian Factual Knowledge
+Measures correctness and necessary completeness of Canadian factual answers against verified reference requirements.
+Scope: Do not score writing style, general application, or length; do not claim improvement proves a fact was newly acquired during training.
+1. Identify the specific Canadian facts the INPUT asks for, including mandatory facts and applicable dates, jurisdictions, or conditions from the verified benchmark reference.
+2. Extract the factual claims the ACTUAL_OUTPUT makes in answering the question, including material additional claims and qualifications.
+3. Check each material answer claim for correctness against the supplied verified reference evidence; flag claims outside the available evidence as unverified, not automatically false.
+4. Check whether all mandatory facts are correctly covered, allowing faithful paraphrases and genuinely equivalent facts instead of literal matching to EXPECTED_OUTPUT.
+5. Assess whether factual statements properly respect the relevant year, province/territory, population, exception, or other qualification; identify material contradictions.
+6. Assign an accuracy-and-completeness judgment based on correct required facts and material errors; do not reward verbosity or conflate factual recall with reasoning or communication style.
+0–2: Provides predominantly incorrect or seriously misleading Canadian facts.
+3–4: Recalls some correct information but includes major factual errors or omissions.
+5–6: Demonstrates partial factual knowledge with important missing or incorrect details.
+7–8: Provides mostly correct and sufficiently complete Canadian facts with minor inaccuracies.
+9–10: Provides accurate, appropriately complete factual information consistent with verified reference evidence.
+
+
+Scoring and progress
+Record rubric scores on a 0–10 scale and normalize integer ratings to 0–1. Probability-weighted judge scores need separate calibration. Track examined, unchecked, fully supported, proposed accept, revise, reject, unresolved and team approval separately. A completed retrieval attempt does not certify an answer.
