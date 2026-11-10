@@ -1,0 +1,12 @@
+{
+  "status": "EXECUTION_AUTHORIZED",
+  "authorized_at": "2026-11-07T03:55:54.911211+00:00",
+  "authorized_by": "User: explicit request to append cleaned benchmark for all three models",
+  "verbatim_instruction": "Can you also add this evalaution dataset to the current queue of 3 currently ongoing evaluations? Make sure there is no leakage and we get clean results from all the 6 evaluations",
+  "queue_manifest_sha256": "c89ba5be26d19455b5b8727d008c6e97a6d96c663ad735c35e6af5c07db5cb26",
+  "execution_authorized": true,
+  "scope": "Three full cleaned-source research runs after the original three runs, plus identical-configuration missing/failed-task recovery",
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false
+}

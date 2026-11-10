@@ -1,0 +1,41 @@
+{
+  "queue_id": "cleaned_three_model_queue_v1",
+  "append_after_queue_manifest_sha256": "1dac8a0f402425b25b0a5a94278af835427f3f1bf170f933b69bae51937fed59",
+  "append_after_completion": "outputs\\queues\\mixed_temperature_three_model_queue_v1\\completion.json",
+  "source_jsonl": "data/incoming/cleaned_three_model/Canadian_ness_Three_Models_Cleaned_for_Evaluation.jsonl",
+  "source_jsonl_sha256": "c5490703a827764f63e0ce436f098365fcec8c7981c362a7062bb32022344610",
+  "ingestion_workbook": "data/incoming/cleaned_three_model/cleaned_source_ingestion.xlsx",
+  "ingestion_workbook_sha256": "c58c494279f245d00f38720cece8e3279f14d3283744d9ab83915b0e334791ff",
+  "order": [
+    "llama",
+    "gc_llm",
+    "apertus"
+  ],
+  "run_ids": [
+    "llama_cleaned_responses_c4_20261107_v2",
+    "gc_llm_cleaned_responses_c4_20261107_v2",
+    "apertus_cleaned_responses_c4_20261107_v2"
+  ],
+  "questions_per_model": 756,
+  "metric_tasks_per_model": 1814,
+  "total_metric_tasks": 5442,
+  "combined_six_run_metric_tasks": 10884,
+  "concurrency": 4,
+  "monitor_interval_seconds": 600,
+  "changed_answers_versus_parent_workbook": {
+    "llama": 8,
+    "gc_llm": 269,
+    "apertus": 140
+  },
+  "source_generation_metadata": "Not supplied in cleaned JSONL; not inferred",
+  "interpretation": "User-provided edited-answer experiment; score changes do not by themselves establish judge repetition bias",
+  "software_sha256": {
+    "src/canadianness_eval/queued_cleaned.py": "da2498d523771e264bdbc11a05204b02cd644ffd7328031d39cb4be2f24446c7",
+    "src/canadianness_eval/concurrent_research.py": "e9c289543cd691b36d4ffb7034c28cb5a1ca0b3a7f5403d0f1e330e621a9b6fc",
+    "src/canadianness_eval/gc_as_generated.py": "62d2b822c133f7542592024d1a3ae074b992dd10cad395b3c863bbe07eddfee1"
+  },
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false,
+  "result_label": "AI-provisional, pending calibration"
+}
