@@ -1,0 +1,9 @@
+{
+  "source": "Explicit user request in this conversation",
+  "verbatim_instruction": "The user has requested proceeding with the full as-generated evaluation. Complete the existing run-specific execution-permission procedure using genuine user authorization; do not invent or bypass required approvals.",
+  "verbatim_goal": "Goal: Finish the full 1,814-task GC LLM evaluation and produce directly comparable, clearly qualified results alongside Llama.",
+  "experiment_sha256": "200ad4198f01bf640b9897e0b5894c28105b8870f5d080b88e09764981f1222d",
+  "execution_permission_only": true,
+  "scientific_validity_approved": false,
+  "team_approval": false
+}

@@ -1,0 +1,14 @@
+{
+  "status": "EXECUTION_AUTHORIZED",
+  "execution_authorized": true,
+  "authorized_by": "User: explicit full GC LLM as-generated evaluation request in this conversation",
+  "authorized_at": "2026-11-06T18:32:38.619240+00:00",
+  "authorization_statement": "I authorize run gc_llm_full_as_generated_20261106_v2: 1,814 gc_llm metric evaluations using the locked v2 configuration, labelled AI-provisional, pending calibration. This is execution permission only, not scientific or team approval.",
+  "experiment_sha256": "200ad4198f01bf640b9897e0b5894c28105b8870f5d080b88e09764981f1222d",
+  "run_id": "gc_llm_full_as_generated_20261106_v2",
+  "scope": "One complete provisional experiment plus identical-configuration missing/failed-task resumption",
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false,
+  "result_label": "AI-provisional, pending calibration"
+}

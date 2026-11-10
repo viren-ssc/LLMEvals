@@ -1,0 +1,74 @@
+{
+  "title": "GC LLM as-generated evaluation contract",
+  "purpose": "Score all 756 original outputs without editing, clipping, deduplicating, filtering, extending, or regenerating any answer.",
+  "scoring_status": "not_started_in_this_chat",
+  "data": {
+    "records": 756,
+    "unique_question_ids": 756,
+    "metric_tasks": 1814,
+    "primary_tasks": 756,
+    "secondary_tasks": 1058,
+    "language_counts": {
+      "fr": 352,
+      "en": 404
+    },
+    "applicable_metric_counts": {
+      "M1": 76,
+      "M2": 234,
+      "M3": 327,
+      "M4": 112,
+      "M5": 174,
+      "M6": 253,
+      "M7": 638
+    },
+    "generation_finish_reason_counts": {
+      "length": 305,
+      "stop": 451
+    },
+    "metric_tasks_by_finish_reason": {
+      "length": 742,
+      "stop": 1072
+    },
+    "all_answers_nonempty": true,
+    "original_answer_strings_preserved_exactly": true
+  },
+  "source_generation": {
+    "model_id": "gc_llm",
+    "model_revision": "58277e94d16ccf486c1702c0aac8115c69448585",
+    "run_id": "20261106T144233Z-f941260c",
+    "max_new_tokens": 1024,
+    "truncated_responses": 305,
+    "repetition_audit_available": true
+  },
+  "judge_protocol_to_pin": {
+    "judge": "gpt-oss-120b",
+    "rubric_version": "2026-11-03-v1",
+    "rubric_sha256": "bb9889807b7babc8feed6a97ddd0c12c0fa334627e5d295017167fbd0a767cb2",
+    "evaluator_factory_version": "final-json-factory-v2",
+    "evaluator_template_sha256": "ecb714aa746f7bdce82d86fd9bcc288d4e26ffd15cfa210bbd19a356e095793f"
+  },
+  "files": {
+    "original_jsonl": {
+      "filename": "gc_llm_756_evaluation_1024_tokens.jsonl",
+      "sha256": "70fa28ca9f47a54f67483fe1934f3ce0c4c0b95dd6f1ee57dbf6dca283464f87"
+    },
+    "normalized_generations": {
+      "filename": "GC_LLM_756_As_Is_DeepEval_Generations.jsonl",
+      "sha256": "6871e3207c71733fb1026439477c1ba1673be8c5e09cfdf0c0ca001d894aca82"
+    },
+    "provenance_sidecar": {
+      "filename": "GC_LLM_756_As_Is_Generation_Provenance.jsonl",
+      "sha256": "6086ff8e57b61da8f464d31016a7e886b71b553983daceebb68ce5ce387e2ab6"
+    }
+  },
+  "interpretation": "As-produced output-quality comparison; 305 outputs hit the 1024-token limit, often due to repetition. Evaluate unchanged and retain these flags for subgroup reporting. Fixed judge/rubric is comparable to Llama but generation configurations may differ. Provisional, pending calibration.",
+  "status_semantics": "success in normalized ingestion means a nonempty generation was produced, not that the response was complete or correct. Retain response_complete/truncated/finish_reason in provenance for analysis.",
+  "constraints": [
+    "Question alone to evaluated model (already generated)",
+    "Reference and supporting context are judge-only",
+    "Score only applicable primary and secondary metrics",
+    "No rewriting, deduplication, reruns, special prompt changes or skipping truncated/repeated answers",
+    "One distinct GC LLM research run, not the Llama run",
+    "Record user execution permission as required by research-run workflow; never impersonate approval"
+  ]
+}

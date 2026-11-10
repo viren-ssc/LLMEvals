@@ -1,0 +1,26 @@
+{
+  "status": "VALID",
+  "questions": 756,
+  "metric_tasks": 1814,
+  "primary": 756,
+  "secondary": 1058,
+  "language_questions": {
+    "fr": 352,
+    "en": 404
+  },
+  "source_strings_preserved": 756,
+  "excel_jsonl_normalized_answers_identical": true,
+  "original_benchmark_evidence_and_applicability_match_llama": true,
+  "truncated": 305,
+  "complete": 451,
+  "derived_repetition_flags": 350,
+  "files": {
+    "data\\incoming\\gc_llm_as_generated\\GC_LLM_756_As_Is_DeepEval_Generations.jsonl": "6871e3207c71733fb1026439477c1ba1673be8c5e09cfdf0c0ca001d894aca82",
+    "data\\incoming\\gc_llm_as_generated\\GC_LLM_756_As_Is_Evaluation_Manifest.json": "99c7c35fa852937aca512291fc2cc53e2a08145525b46259a5bf83e4a5713b5e",
+    "data\\incoming\\gc_llm_as_generated\\GC_LLM_756_As_Is_Generation_Provenance.jsonl": "6086ff8e57b61da8f464d31016a7e886b71b553983daceebb68ce5ce387e2ab6",
+    "data\\incoming\\gc_llm_as_generated\\gc_llm_756_evaluation_1024_tokens.jsonl": "70fa28ca9f47a54f67483fe1934f3ce0c4c0b95dd6f1ee57dbf6dca283464f87",
+    "data\\incoming\\gc_llm_as_generated\\gc_llm_756_evaluation_1024_tokens.xlsx": "4f8fe714d026d0e2ed4d018cb2120c49cf2ed125cd8471ff899f92a89e3c1238"
+  },
+  "plan_sha256": "200ad4198f01bf640b9897e0b5894c28105b8870f5d080b88e09764981f1222d",
+  "repetition_flags_are_exploratory": true
+}
