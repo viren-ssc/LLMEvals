@@ -1,0 +1,23 @@
+{
+  "status": "PENDING_EXECUTION_AUTHORIZATION",
+  "experiment_sha256": "e77d107fc034465d373df8356be26d6cced4fb0d38debe4d2090fd8f357e45df",
+  "run_id": "llama_full_20261106_v2",
+  "authorized_by": null,
+  "authorized_at": null,
+  "execution_authorized": false,
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false,
+  "required_confirmation": "I authorize run llama_full_20261106_v2: 1,814 llama metric evaluations using the locked v2 configuration, labelled AI-provisional, pending calibration. This is execution permission only, not scientific or team approval.",
+  "scope": "One complete experiment plus same-configuration missing/failed-task resumption",
+  "result_label": "AI-provisional, pending calibration",
+  "known_limitations": [
+    "Booster-seat M3 conditional-guidance credit and M6 extra-detail deductions remain inconsistent.",
+    "Optional reference enrichment and scoring-band justification are not consistently handled.",
+    "Institutional duty timing versus factual recall and exact within-band scores are human calibration decisions.",
+    "Some ancillary factual claims and reference dates remain unverified by the supplied summaries.",
+    "Evidence verification is the imported user benchmark attestation, not new local independent verification.",
+    "Gateway-default sampling is not proven deterministic; weights/revision and deployment limits are not independently attested.",
+    "No human calibration, team approval, overall weighting policy or scientific-validity approval is implied."
+  ]
+}

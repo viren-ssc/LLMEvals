@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-11-06T13:53:58.147995+00:00",
+  "status": "PREPARED_AWAITING_USER_REVIEW_AND_FROZEN_CONFIGURATION",
+  "full_run_started": false,
+  "planned_evaluations": 1814,
+  "pilot_passed": true,
+  "pilot_acceptance_sha256": "34eab59dae521abd29eb672df864c9df5a48b3c112a1531ca713317d2c225af2",
+  "rubric_sha256": "bb9889807b7babc8feed6a97ddd0c12c0fa334627e5d295017167fbd0a767cb2",
+  "prepared_cases_sha256": "69fe63751cc8c7329dfb89ecb08a53a6a9ef3629f1ef0c2e0687211369077f05",
+  "full_run_plan_sha256": "ca8f80532ed9c9c4fe621030d80df6ecc52013803cccec888e17fc472be31883",
+  "gates": [
+    "User review of real Llama pilot",
+    "Existing human-approved frozen production metric configuration"
+  ],
+  "provisional": true
+}

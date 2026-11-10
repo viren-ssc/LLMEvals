@@ -1,0 +1,47 @@
+{
+  "phase": "PILOT_PROVISIONAL",
+  "rubric_artifact": "config\\final\\2026-11-03-v1\\metrics_final.json",
+  "rubric_sha256": "bb9889807b7babc8feed6a97ddd0c12c0fa334627e5d295017167fbd0a767cb2",
+  "rubric_status": "ready_for_team_review_and_calibration_not_empirically_frozen",
+  "source_files": {
+    "data\\incoming\\Canadian-ness_Llama_756_Ready_for_DeepEval.xlsx": {
+      "sha256": "e11cca1ff6e7e3e16d2951283f238b6c0af5bcd0b3de1710393a60ccabd12d59"
+    },
+    "data\\incoming\\Canadian-ness_Llama_756_Generations.jsonl": {
+      "sha256": "a6cc95e07bb7870dcc235583c16faf8fdfdeedcb8d756a58083829278b404368"
+    }
+  },
+  "evidence_attestation": "User-supplied project task states benchmark reference answers are verified and context is evidence-based supporting text. This imports that user attestation for provisional judging only; no new independent source verification or verbatim-quotation claim.",
+  "selection_policy": "One primary assignment per metric/language; least metric count then shortest answer, except M6 explicit EN canal/FR booster-seat uncertainty cases. All applicable labels retained.",
+  "full_run_execution_enabled": false,
+  "approval_gates": [
+    "Review real pilot results with user",
+    "Existing frozen production rubric approval gate remains unchanged"
+  ],
+  "packages": {
+    "deepeval": "4.3.2",
+    "pydantic": "2.14.2",
+    "httpx": "0.28.1",
+    "pandas": "3.1.0",
+    "openpyxl": "3.1.5"
+  },
+  "question_count": 756,
+  "metric_evaluations": 1814,
+  "pilot_question_ids": [
+    "GC-HQ-0157",
+    "CA-EXP-007",
+    "CA-EXP-037",
+    "CA-EXP-042",
+    "CA-EXP-090",
+    "CA-EXP2-059",
+    "CA-EXP2-180",
+    "CA-EXP2-312",
+    "CA-XP-20261103-151",
+    "CA-XP-20261103-190",
+    "CA-XP-20261103-192",
+    "CA-XP-20261103-279",
+    "CA-M1-20261104-001",
+    "CA-M1-20261104-050"
+  ],
+  "pilot_evaluations": 22
+}

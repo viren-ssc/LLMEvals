@@ -1,0 +1,51 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-11-06T13:49:21.214026+00:00",
+  "checks": {
+    "756_generation_records": true,
+    "exact_id_match": true,
+    "756_nonempty_answers": true,
+    "excel_jsonl_answers_identical": true,
+    "language_distribution": true,
+    "1814_metric_evaluations": true
+  },
+  "files": {
+    "data\\incoming\\Canadian-ness_Llama_756_Ready_for_DeepEval.xlsx": {
+      "sha256": "e11cca1ff6e7e3e16d2951283f238b6c0af5bcd0b3de1710393a60ccabd12d59"
+    },
+    "data\\incoming\\Canadian-ness_Llama_756_Generations.jsonl": {
+      "sha256": "a6cc95e07bb7870dcc235583c16faf8fdfdeedcb8d756a58083829278b404368"
+    }
+  },
+  "questions": 756,
+  "unique_question_ids": 756,
+  "nonempty_llama_answers": 756,
+  "languages": {
+    "fr": 352,
+    "en": 404
+  },
+  "primary_assignments": 756,
+  "secondary_assignments": 1058,
+  "metric_evaluations": 1814,
+  "per_metric": {
+    "M1": 76,
+    "M2": 234,
+    "M3": 327,
+    "M4": 112,
+    "M5": 174,
+    "M6": 253,
+    "M7": 638
+  },
+  "per_primary_metric": {
+    "M1": 59,
+    "M2": 161,
+    "M3": 233,
+    "M4": 61,
+    "M5": 72,
+    "M6": 95,
+    "M7": 75
+  },
+  "generation_metadata_fields": [],
+  "generation_metadata_note": "No model checkpoint revision, inference settings, prompt template or token counts supplied. Not invented.",
+  "comparison_scope": "Excel/JSONL comparison; no separate final benchmark artifact supplied for independent text comparison."
+}

@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-11-06T14:11:04.990094+00:00",
+  "status": "HOLD_UNATTENDED_PRODUCTION_PENDING_HUMAN_ADJUDICATION",
+  "recommendation": "Do not authorize unattended 1814-task run yet. Accept the technically validated v2 implementation, adjudicate the remaining interpretation/band issues and satisfy the frozen gate. No further automatic prompt-development cycle or rejudging is scheduled.",
+  "technical_checks_passed": true,
+  "scoring_consistency_clearance": false,
+  "human_approval": false,
+  "full_run_started": false,
+  "rubric_sha256": "bb9889807b7babc8feed6a97ddd0c12c0fa334627e5d295017167fbd0a767cb2",
+  "evaluator_template_version": "final-json-factory-v2",
+  "evaluator_template_sha256": "ecb714aa746f7bdce82d86fd9bcc288d4e26ffd15cfa210bbd19a356e095793f",
+  "factory_sha256": "813df6b3ad525c7036e92c5d1301f70e4c22a6fb6e47fbafff13ad8bc836e36f",
+  "interpretation_sha256": "b55383b2393ce69bf67cbb27afa5270a9cedd89026862f730845d63d9733308c",
+  "deepeval_version": "4.3.2",
+  "new_evaluations": 22,
+  "baseline_unchanged": true,
+  "score_changes": {
+    "unchanged": 12,
+    "decreased": 5,
+    "increased": 5
+  },
+  "disputed_pairs": [
+    {
+      "question_id": "CA-XP-20261103-192",
+      "evaluation_metric": "M2",
+      "assessment": "ADDRESSED_AT_EXPLANATION_LEVEL",
+      "reason": "New reason links the incorrect deadline to misrepresenting the core public duty and the 0?2 governmental-responsibility anchor; the unasked declaration-content penalty is gone. This is a defensible interpretation, not proof that 0.1 is uniquely calibrated. Human scope/band endorsement remains required."
+    },
+    {
+      "question_id": "CA-EXP-037",
+      "evaluation_metric": "M6",
+      "assessment": "ADDRESSED_AT_EXPLANATION_LEVEL",
+      "reason": "Style deduction disappeared. New reason credits no guarantee, qualification, checking NCC and avoiding fabrication, matching the 9?10 reliability band. Some ancillary opening-window/probability/newsletter claims remain unverified by the short evidence."
+    },
+    {
+      "question_id": "CA-EXP2-059",
+      "evaluation_metric": "M3",
+      "assessment": "UNRESOLVED",
+      "reason": "The false no-list criticism disappeared, but the replacement deduction still requires an explicit province question despite semantically equivalent conditional guidance. It does not identify a concrete missing practical requirement such as an actual belt-fit assessment."
+    },
+    {
+      "question_id": "CA-EXP2-059",
+      "evaluation_metric": "M6",
+      "assessment": "UNRESOLVED",
+      "reason": "The reason now accepts uncertainty handling and no fabricated facts, but cites minor over-detail. That does not establish the reliability weakness required to choose 7?8 instead of 9?10. Seat type/manufacturer limits also appear in the supplied reference."
+    }
+  ],
+  "prepared_unique_tasks": 1814,
+  "primary_tasks": 756,
+  "secondary_tasks": 1058,
+  "frozen_gate_satisfied": false,
+  "model_compatibility": "Generic model-aware cases, metric-level checkpoint keys and exports unchanged; GC LLM/Apertus can be imported independently with their own manifests."
+}

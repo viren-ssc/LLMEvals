@@ -1,0 +1,14 @@
+{
+  "status": "EXECUTION_AUTHORIZED",
+  "execution_authorized": true,
+  "authorized_by": "User: explicit authorization in this chat on 2026-11-06",
+  "authorized_at": "2026-11-06T14:38:45.915736+00:00",
+  "authorization_statement": "I authorize run llama_full_20261106_v2: 1,814 llama metric evaluations using the locked v2 configuration, labelled AI-provisional, pending calibration. This is execution permission only, not scientific or team approval.",
+  "experiment_sha256": "e77d107fc034465d373df8356be26d6cced4fb0d38debe4d2090fd8f357e45df",
+  "run_id": "llama_full_20261106_v2",
+  "scope": "One complete provisional experiment plus identical-configuration missing/failed-task resumption",
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false,
+  "result_label": "AI-provisional, pending calibration"
+}

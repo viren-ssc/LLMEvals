@@ -1,0 +1,330 @@
+{
+  "timestamp": "2026-11-06T13:58:52.915545+00:00",
+  "checks": {
+    "756_unique_questions": true,
+    "756_nonempty_llama_answers": true,
+    "exact_excel_jsonl_ids_and_answers": true,
+    "language_404_en_352_fr": true,
+    "1814_unique_tasks": true,
+    "exact_applicability_and_roles": true,
+    "prepared_text_answers_unchanged": true,
+    "rubric_checksum_unchanged": true,
+    "42_fixed_steps_35_bands": true,
+    "22_valid_unique_scoring_records": true,
+    "output_roles_and_metadata": true,
+    "one_metric_per_checkpoint": true,
+    "recorded_noop_resume_passed": true,
+    "stored_request_audit_passed": true,
+    "configured_endpoint_matches_successful_pilot": true,
+    "configured_model_matches_pilot": true,
+    "all_22_payloads_rechecked": true,
+    "no_full_scoring_records": true,
+    "prepared_case_and_plan_hashes_unchanged": true
+  },
+  "all_technical_artifact_checks_passed": true,
+  "question_count": 756,
+  "metric_tasks": 1814,
+  "primary_tasks": 756,
+  "secondary_tasks": 1058,
+  "rubric_artifact": "config\\final\\2026-11-03-v1\\metrics_final.json",
+  "rubric_sha256": "bb9889807b7babc8feed6a97ddd0c12c0fa334627e5d295017167fbd0a767cb2",
+  "rubric_version": "2026-11-03-v1",
+  "rubric_status": "ready_for_team_review_and_calibration_not_empirically_frozen",
+  "configured_endpoint": "https://litellm.dsai-sdia.ssc-spc.cloud-nuage.canada.ca/v1",
+  "configured_model_setting": "auto",
+  "previously_verified_model": "gpt-oss-120b",
+  "new_judge_calls": 0,
+  "frozen_configuration_files": [],
+  "production_frozen_gate_satisfied": false,
+  "status": "TECHNICAL_PILOT_VALIDATED_SCORING_INTERPRETATION_REVIEW_REQUIRED",
+  "full_run_started": false,
+  "compatibility_note": "Existing Generation/EvaluationResult and task/checkpoint keys retain evaluated_model/model_variant; models can be added independently. Current intake command is Llama-specific, so later imports require their own validated cases/manifests. No paired-model results required.",
+  "payload_checks": [
+    {
+      "question_id": "CA-EXP-007",
+      "metric": "M7",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-XP-20261103-151",
+      "metric": "M5",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-EXP-090",
+      "metric": "M4",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-EXP-042",
+      "metric": "M5",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-EXP2-180",
+      "metric": "M7",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-XP-20261103-151",
+      "metric": "M7",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-EXP2-059",
+      "metric": "M1",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-EXP2-059",
+      "metric": "M3",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-EXP2-180",
+      "metric": "M3",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-XP-20261103-192",
+      "metric": "M2",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-EXP-037",
+      "metric": "M3",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-XP-20261103-279",
+      "metric": "M7",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-XP-20261103-279",
+      "metric": "M3",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-EXP2-312",
+      "metric": "M4",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-M1-20261104-001",
+      "metric": "M1",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-XP-20261103-190",
+      "metric": "M7",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-XP-20261103-190",
+      "metric": "M2",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "GC-HQ-0157",
+      "metric": "M7",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-EXP2-059",
+      "metric": "M6",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-EXP-037",
+      "metric": "M6",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-XP-20261103-192",
+      "metric": "M7",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    },
+    {
+      "question_id": "CA-M1-20261104-050",
+      "metric": "M1",
+      "checks": {
+        "six_fixed_steps": true,
+        "five_exact_bands": true,
+        "question_and_answer_exact": true,
+        "isolated_metric_scope": true,
+        "native_normalization_once": true,
+        "scoring_schema_only": true,
+        "actual_response_model": true
+      }
+    }
+  ]
+}

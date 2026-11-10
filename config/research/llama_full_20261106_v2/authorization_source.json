@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-11-06T14:38:45.918463+00:00",
+  "source": "User message in this chat",
+  "original_authorization": "I authorize run `llama_full_20261106_v2`: 1,814 Llama metric evaluations using the locked v2 configuration, labelled AI-provisional, pending calibration. This is execution permission only, not scientific or team approval.",
+  "authorized_experiment_sha256": "e77d107fc034465d373df8356be26d6cced4fb0d38debe4d2090fd8f357e45df",
+  "execution_only": true,
+  "scientific_approval": false,
+  "team_approval": false
+}
