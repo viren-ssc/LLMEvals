@@ -1,0 +1,314 @@
+status: DRAFT
+rubrics:
+  M1:
+    approved: false
+    bands:
+    - score_range:
+      - 0
+      - 2
+      description: Completely misses essential Canadian context or substitutes an
+        incompatible foreign framework.
+    - score_range:
+      - 3
+      - 4
+      description: Partially recognizes Canada but misidentifies important context
+        or jurisdiction.
+    - score_range:
+      - 5
+      - 6
+      description: Recognizes the main Canadian context but misses relevant implicit
+        cues or distinctions.
+    - score_range:
+      - 7
+      - 8
+      description: Correctly identifies nearly all relevant Canadian contextual requirements
+        with minor omissions.
+    - score_range:
+      - 9
+      - 10
+      description: Accurately recognizes and applies all necessary contextual and
+        jurisdictional cues without inappropriate assumptions.
+    guidance: Choose within a band by materiality and extent. Score 10 only when every
+      task-relevant requirement is met with no material failure. A short complete
+      answer can earn 10; irrelevant length earns nothing. Unsupported claims lower
+      this metric only where they affect its target construct. Do not double-count
+      style, recall and reasoning failures outside the stated boundary. Judge whether
+      framing follows Canadian cues; reserve detailed policy correctness for M7.
+    ambiguities: Decide material versus cosmetic omissions against the question and
+      independent evidence. Missing necessary evidence is an evaluation error, not
+      evidence of a bad answer. Acknowledge justified uncertainty; do not reward evasiveness.
+    examples:
+      weak: Ask your US insurer about Medicare.
+      moderate: Canada has public health coverage. Contact the Canadian government;
+        I am not sure which jurisdiction handles it.
+      strong: Ask Ontario about provincial health coverage and clarify eligibility
+        details.
+    example_question: I moved to Ontario. Which health system should I ask about?
+  M2:
+    approved: false
+    bands:
+    - score_range:
+      - 0
+      - 2
+      description: Fundamentally misunderstands relevant institutions or governmental
+        responsibilities.
+    - score_range:
+      - 3
+      - 4
+      description: Recognizes some institutions but makes important jurisdictional
+        mistakes.
+    - score_range:
+      - 5
+      - 6
+      description: Understands the main institutional structure while missing material
+        distinctions.
+    - score_range:
+      - 7
+      - 8
+      description: Correctly explains relevant responsibilities with only minor omissions.
+    - score_range:
+      - 9
+      - 10
+      description: Precisely distinguishes all applicable institutional and regional
+        responsibilities supported by the evidence.
+    guidance: Choose within a band by materiality and extent. Score 10 only when every
+      task-relevant requirement is met with no material failure. A short complete
+      answer can earn 10; irrelevant length earns nothing. Unsupported claims lower
+      this metric only where they affect its target construct. Do not double-count
+      style, recall and reasoning failures outside the stated boundary. Treat confusion
+      about which level has responsibility as material; do not require irrelevant
+      institutional lists.
+    ambiguities: Decide material versus cosmetic omissions against the question and
+      independent evidence. Missing necessary evidence is an evaluation error, not
+      evidence of a bad answer. Acknowledge justified uncertainty; do not reward evasiveness.
+    examples:
+      weak: The US Department of Education.
+      moderate: Manitoba has an education authority, but I think the federal government
+        approves its curriculum.
+      strong: The provincial education authority in Manitoba.
+    example_question: Under the supplied assumption, who sets Manitoba public school
+      curriculum?
+  M3:
+    approved: false
+    bands:
+    - score_range:
+      - 0
+      - 2
+      description: Provides unusable advice or reasoning based on fundamentally inappropriate
+        assumptions.
+    - score_range:
+      - 3
+      - 4
+      description: Provides some relevant information but incorrect or substantially
+        incomplete practical guidance.
+    - score_range:
+      - 5
+      - 6
+      description: Offers partially workable reasoning while overlooking important
+        conditions.
+    - score_range:
+      - 7
+      - 8
+      description: Applies knowledge correctly to most aspects of the situation with
+        minor omissions.
+    - score_range:
+      - 9
+      - 10
+      description: Applies Canadian knowledge accurately, logically, and appropriately
+        to the entire practical situation.
+    guidance: Choose within a band by materiality and extent. Score 10 only when every
+      task-relevant requirement is met with no material failure. A short complete
+      answer can earn 10; irrelevant length earns nothing. Unsupported claims lower
+      this metric only where they affect its target construct. Do not double-count
+      style, recall and reasoning failures outside the stated boundary. Weight omitted
+      conditions by whether they make the next step unusable; distinguish sound conditional
+      guidance from unsupported policy assertions.
+    ambiguities: Decide material versus cosmetic omissions against the question and
+      independent evidence. Missing necessary evidence is an evaluation error, not
+      evidence of a bad answer. Acknowledge justified uncertainty; do not reward evasiveness.
+    examples:
+      weak: Keep the same coverage forever without checking.
+      moderate: Contact BC about coverage when you arrive.
+      strong: Contact both provinces, confirm end and start dates and any transition
+        requirements before moving.
+    example_question: Assume provincial coverage procedures differ. How should I plan
+      a Manitoba to BC move?
+  M4:
+    approved: false
+    bands:
+    - score_range:
+      - 0
+      - 2
+      description: Uses seriously inappropriate or misleading terminology or fails
+        the requested language requirement.
+    - score_range:
+      - 3
+      - 4
+      description: Uses partially appropriate language but contains significant terminology
+        or language errors.
+    - score_range:
+      - 5
+      - 6
+      description: Communicates understandably with noticeable Canadian-specific language
+        deficiencies.
+    - score_range:
+      - 7
+      - 8
+      description: Uses appropriate terminology and language with minor, noncritical
+        issues.
+    - score_range:
+      - 9
+      - 10
+      description: Communicates naturally, precisely, and appropriately in the requested
+        language and Canadian context.
+    guidance: Choose within a band by materiality and extent. Score 10 only when every
+      task-relevant requirement is met with no material failure. A short complete
+      answer can earn 10; irrelevant length earns nothing. Unsupported claims lower
+      this metric only where they affect its target construct. Do not double-count
+      style, recall and reasoning failures outside the stated boundary. Ignore harmless
+      spelling variants. Require French or bilingual output only when requested; wrong
+      institutional names are more severe than minor grammar slips.
+    ambiguities: Decide material versus cosmetic omissions against the question and
+      independent evidence. Missing necessary evidence is an evaluation error, not
+      evidence of a bad answer. Acknowledge justified uncertainty; do not reward evasiveness.
+    examples:
+      weak: It means the Internal Revenue Service.
+      moderate: ARC veut dire Agence du revenu. The institution is Canadian.
+      strong: ARC signifie Agence du revenu du Canada.
+    example_question: 'Répondez en français : que signifie ARC dans un contexte fiscal
+      canadien?'
+  M5:
+    approved: false
+    bands:
+    - score_range:
+      - 0
+      - 2
+      description: Fundamentally misrepresents relevant Canadian social or cultural
+        realities or relies on serious unsupported stereotypes.
+    - score_range:
+      - 3
+      - 4
+      description: Demonstrates limited understanding with substantial generalizations
+        or inaccuracies.
+    - score_range:
+      - 5
+      - 6
+      description: Shows basic awareness but misses material nuance or relevant diversity.
+    - score_range:
+      - 7
+      - 8
+      description: Provides accurate and appropriately nuanced cultural understanding
+        with minor omissions.
+    - score_range:
+      - 9
+      - 10
+      description: Demonstrates precise, relevant, balanced understanding of the cultural
+        or societal context without unsupported generalization.
+    guidance: Choose within a band by materiality and extent. Score 10 only when every
+      task-relevant requirement is met with no material failure. A short complete
+      answer can earn 10; irrelevant length earns nothing. Unsupported claims lower
+      this metric only where they affect its target construct. Do not double-count
+      style, recall and reasoning failures outside the stated boundary. Treat stereotypes
+      and homogenization as substantive errors; reward only nuance relevant to the
+      prompt.
+    ambiguities: Decide material versus cosmetic omissions against the question and
+      independent evidence. Missing necessary evidence is an evaluation error, not
+      evidence of a bad answer. Acknowledge justified uncertainty; do not reward evasiveness.
+    examples:
+      weak: All communities share exactly one culture.
+      moderate: First Nations, Inuit and Métis are different groups, but all communities
+        within each group have the same culture.
+      strong: First Nations, Inuit and Métis peoples and their communities have distinct
+        histories, languages and governance; avoid generalizing.
+    example_question: Explain why a single description cannot represent all Indigenous
+      communities in Canada.
+  M6:
+    approved: false
+    bands:
+    - score_range:
+      - 0
+      - 2
+      description: Contains major unsupported claims, fabrications, or dangerously
+        unjustified certainty.
+    - score_range:
+      - 3
+      - 4
+      description: Contains significant unsupported claims or fails to acknowledge
+        important uncertainty.
+    - score_range:
+      - 5
+      - 6
+      description: Is partly grounded but includes overconfident statements or material
+        uncertainty-handling weaknesses.
+    - score_range:
+      - 7
+      - 8
+      description: Is generally well grounded, with appropriately calibrated claims
+        and only minor weaknesses.
+    - score_range:
+      - 9
+      - 10
+      description: Consistently distinguishes supported facts from uncertainty, avoids
+        fabrication, and communicates limitations precisely.
+    guidance: Choose within a band by materiality and extent. Score 10 only when every
+      task-relevant requirement is met with no material failure. A short complete
+      answer can earn 10; irrelevant length earns nothing. Unsupported claims lower
+      this metric only where they affect its target construct. Do not double-count
+      style, recall and reasoning failures outside the stated boundary. Invented verification,
+      sources or certainty about eligibility are severe. Appropriate acknowledgement
+      of missing evidence can earn full credit without a factual answer.
+    ambiguities: Decide material versus cosmetic omissions against the question and
+      independent evidence. Missing necessary evidence is an evaluation error, not
+      evidence of a bad answer. Acknowledge justified uncertainty; do not reward evasiveness.
+    examples:
+      weak: Yes, I verified your eligibility and you will receive $9000 tomorrow.
+      moderate: You probably qualify, although I have not checked the program or province.
+      strong: I cannot confirm. Which program and province, and for what date? Check
+        current official eligibility criteria.
+    example_question: Is this unnamed provincial program available to me today? No
+      eligibility evidence is supplied.
+  M7:
+    approved: false
+    bands:
+    - score_range:
+      - 0
+      - 2
+      description: Provides predominantly incorrect or seriously misleading Canadian
+        facts.
+    - score_range:
+      - 3
+      - 4
+      description: Recalls some correct information but includes major factual errors
+        or omissions.
+    - score_range:
+      - 5
+      - 6
+      description: Demonstrates partial factual knowledge with important missing or
+        incorrect details.
+    - score_range:
+      - 7
+      - 8
+      description: Provides mostly correct and sufficiently complete Canadian facts
+        with minor inaccuracies.
+    - score_range:
+      - 9
+      - 10
+      description: Provides accurate, appropriately complete factual information consistent
+        with verified reference evidence.
+    guidance: Choose within a band by materiality and extent. Score 10 only when every
+      task-relevant requirement is met with no material failure. A short complete
+      answer can earn 10; irrelevant length earns nothing. Unsupported claims lower
+      this metric only where they affect its target construct. Do not double-count
+      style, recall and reasoning failures outside the stated boundary. Compare all
+      requested factual units to the supplied reference. Correctly answering only
+      one of two equally essential facts is partial performance; unsupported added
+      facts can reduce accuracy.
+    ambiguities: Decide material versus cosmetic omissions against the question and
+      independent evidence. Missing necessary evidence is an evaluation error, not
+      evidence of a bad answer. Acknowledge justified uncertainty; do not reward evasiveness.
+    examples:
+      weak: Toronto.
+      moderate: Winnipeg is the capital; Manitoba entered Confederation in 1867.
+      strong: Winnipeg; 1870.
+    example_question: What is Manitoba's capital, and in what year did Manitoba enter
+      Confederation?
