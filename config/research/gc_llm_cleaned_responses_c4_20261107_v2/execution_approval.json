@@ -1,0 +1,14 @@
+{
+  "status": "EXECUTION_AUTHORIZED",
+  "execution_authorized": true,
+  "authorized_by": "User: explicit three-model cleaned JSONL queue request",
+  "authorized_at": "2026-11-07T03:56:13.457637+00:00",
+  "authorization_statement": "I authorize run gc_llm_cleaned_responses_c4_20261107_v2: 1,814 gc_llm metric evaluations using the locked v2 configuration, labelled AI-provisional, pending calibration. This is execution permission only, not scientific or team approval.",
+  "experiment_sha256": "1bbed6bbd31b2c671396dff4f073cbbd6c22dfde053bb0af00cbc8b35edf28c6",
+  "run_id": "gc_llm_cleaned_responses_c4_20261107_v2",
+  "scope": "One complete provisional experiment plus identical-configuration missing/failed-task resumption",
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false,
+  "result_label": "AI-provisional, pending calibration"
+}
