@@ -1,0 +1,6 @@
+{"question_id": "synthetic-fr", "evaluated_model": "gc_llm", "answer": "Bonjour.", "status": "success", "inference_settings": {}}
+{"question_id": "synthetic-fr", "evaluated_model": "apertus", "answer": "Bonjour.", "status": "success", "inference_settings": {}}
+{"question_id": "synthetic-fr", "evaluated_model": "llama", "answer": "Bonjour.", "status": "success", "inference_settings": {}}
+{"question_id": "synthetic-en", "evaluated_model": "gc_llm", "answer": "The Canadian flag.", "status": "success", "inference_settings": {}}
+{"question_id": "synthetic-en", "evaluated_model": "apertus", "answer": null, "status": "failed", "inference_settings": {}}
+{"question_id": "synthetic-en", "evaluated_model": "llama", "answer": "The Canadian flag.", "status": "success", "inference_settings": {}}

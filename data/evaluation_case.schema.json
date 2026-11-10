@@ -1,0 +1,96 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "question_id": {
+      "minLength": 1,
+      "title": "Question Id",
+      "type": "string"
+    },
+    "question": {
+      "minLength": 1,
+      "title": "Question",
+      "type": "string"
+    },
+    "model_answer": {
+      "minLength": 1,
+      "title": "Model Answer",
+      "type": "string"
+    },
+    "reference_answer": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reference Answer"
+    },
+    "reference_context": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reference Context",
+      "type": "array"
+    },
+    "source_urls": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Urls",
+      "type": "array"
+    },
+    "reference_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reference Ids",
+      "type": "array"
+    },
+    "applicable_metrics": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Applicable Metrics",
+      "type": "array"
+    },
+    "model_variant": {
+      "minLength": 1,
+      "title": "Model Variant",
+      "type": "string"
+    },
+    "provenance": {
+      "default": "unspecified",
+      "title": "Provenance",
+      "type": "string"
+    },
+    "illustrative": {
+      "default": false,
+      "title": "Illustrative",
+      "type": "boolean"
+    },
+    "expected_quality": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Quality"
+    }
+  },
+  "required": [
+    "question_id",
+    "question",
+    "model_answer",
+    "applicable_metrics",
+    "model_variant"
+  ],
+  "title": "EvaluationCase",
+  "type": "object"
+}
