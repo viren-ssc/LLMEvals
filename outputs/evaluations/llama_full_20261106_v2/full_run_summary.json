@@ -1,0 +1,57 @@
+{
+  "run_id": "llama_full_20261106_v2",
+  "evaluated_model": "llama",
+  "planned": 1814,
+  "successful": 1814,
+  "failed_or_skipped": 0,
+  "missing": 0,
+  "status_counts": {
+    "SUCCESS": 1814
+  },
+  "result_label": "AI-provisional, pending calibration",
+  "scientific_validity_approved": false,
+  "rubric_empirically_calibrated": false,
+  "scoring_http_attempts": 1818,
+  "discovery_http_attempts": 3,
+  "uncheckpointed_http_events": 0,
+  "session_http_attempts": 1821,
+  "api_reported_tokens": {
+    "completion_tokens": 1007842,
+    "prompt_tokens": 2892134,
+    "total_tokens": 3899976
+  },
+  "uncheckpointed_api_reported_tokens": {},
+  "scoring_http_events_without_usage": 4,
+  "http_status_counts": {
+    "200": 1814,
+    "500": 1,
+    "network_or_timeout": 2,
+    "403": 1
+  },
+  "accounting_note": "Tokens include all checkpointed attempts, including failures/retries with reported usage. Uncheckpointed events are reported separately; interrupted in-flight or unreported usage is unknown, not zero.",
+  "known_scoring_limitations": [
+    "Booster-seat M3 conditional-guidance credit and M6 extra-detail deductions remain inconsistent.",
+    "Optional reference enrichment and scoring-band justification are not consistently handled.",
+    "Institutional duty timing versus factual recall and exact within-band scores are human calibration decisions.",
+    "Some ancillary factual claims and reference dates remain unverified by the supplied summaries.",
+    "Evidence verification is the imported user benchmark attestation, not new local independent verification.",
+    "Gateway-default sampling is not proven deterministic; weights/revision and deployment limits are not independently attested.",
+    "No human calibration, team approval, overall weighting policy or scientific-validity approval is implied."
+  ],
+  "observed_statistics": {
+    "evaluations": 1814,
+    "successes": 1814,
+    "errors": 0,
+    "error_rate": 0.0,
+    "scoring_http_attempts": 1818,
+    "saved_evaluation_attempts": 1815,
+    "failed_evaluation_attempts": 1,
+    "mean_evaluation_latency_seconds": 3.721600971735062,
+    "median_evaluation_latency_seconds": 3.4221340999938548,
+    "min_evaluation_latency_seconds": 1.6205673000076786,
+    "max_evaluation_latency_seconds": 257.4071392000187,
+    "projected_sequential_seconds_1814": 6750.984162727403,
+    "projection_note": "Pilot sample conditional on current gateway load and short selected answers; not measured full-run throughput. No arbitrary overall score.",
+    "provisional": true
+  }
+}
