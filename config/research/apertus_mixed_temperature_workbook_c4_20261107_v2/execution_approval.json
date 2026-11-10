@@ -1,0 +1,14 @@
+{
+  "status": "EXECUTION_AUTHORIZED",
+  "execution_authorized": true,
+  "authorized_by": "User: explicit three-model workbook queue instruction; scope bound to queue manifest",
+  "authorized_at": "2026-11-07T02:52:07.217405+00:00",
+  "authorization_statement": "I authorize run apertus_mixed_temperature_workbook_c4_20261107_v2: 1,814 apertus metric evaluations using the locked v2 configuration, labelled AI-provisional, pending calibration. This is execution permission only, not scientific or team approval.",
+  "experiment_sha256": "66f5d7fa66672ab83fbbadfa6eb0dd0cebcfe38801f6f7ac1d34207675270b55",
+  "run_id": "apertus_mixed_temperature_workbook_c4_20261107_v2",
+  "scope": "One complete provisional experiment plus identical-configuration missing/failed-task resumption",
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false,
+  "result_label": "AI-provisional, pending calibration"
+}

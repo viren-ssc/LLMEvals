@@ -1,0 +1,13 @@
+{
+  "status": "VALID",
+  "questions": 756,
+  "metric_tasks": 1814,
+  "primary": 756,
+  "secondary": 1058,
+  "exact_workbook_response_strings_preserved": true,
+  "source_workbook_sha256": "2c28b3a8aadda242394e047b092a2c25913844ea498f2207a72a869710e6dd15",
+  "language_questions": {
+    "fr": 352,
+    "en": 404
+  }
+}
