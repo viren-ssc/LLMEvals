@@ -1,0 +1,884 @@
+{
+  "title": "Canadianness: proposed refined G-Eval evaluation steps and rubrics",
+  "version": "2026-11-05-v2-review-draft",
+  "status": "proposed_pending_human_adjudication_and_held_out_calibration_not_empirically_frozen",
+  "source_artifacts": [
+    "Canadian_Ness_GEVAL_Review.xlsx",
+    "Pasted text.txt"
+  ],
+  "generation_summary": {
+    "metrics": 7,
+    "runs_per_metric": 4,
+    "total_successful_runs": 28,
+    "original_candidate_steps": 177,
+    "final_steps": 42,
+    "pilot_cases": 21
+  },
+  "scoring": {
+    "source_rubric_scale": "0_to_10_five_bands",
+    "report_scale": "0_to_1",
+    "normalization": "raw_score / 10 if judge returns an integer 0–10 rating",
+    "note": "Do not assume DeepEval probability-weighted score maps exactly to one human rubric integer."
+  },
+  "preconditions": [
+    "Verified question-specific answer requirements and source evidence, where required",
+    "Closed-book model under test; gold answers and evidence reserved for evaluator",
+    "Metrics only applied to relevant questions; N/A when inapplicable",
+    "Unverified evidence triggers human review, not automatic failure"
+  ],
+  "metrics": [
+    {
+      "metric_id": "M1",
+      "name": "Canadian Context Recognition",
+      "criteria": "Recognizes when a Canadian setting is indicated, applies that frame, and handles unresolved jurisdiction appropriately.",
+      "scope_exclusions": "Do not score detailed policy correctness, broad factual recall, or stylistic choices here. Never require the literal word 'Canada'.",
+      "required_evaluation_params": [
+        "INPUT",
+        "ACTUAL_OUTPUT"
+      ],
+      "optional_evaluation_params": [
+        "EXPECTED_OUTPUT",
+        "CONTEXT"
+      ],
+      "evaluation_steps": [
+        "Identify whether the INPUT establishes a Canadian setting explicitly, implies it through reliable cues, or leaves the country/jurisdiction genuinely unresolved.",
+        "When a Canadian setting is established, check that the ACTUAL_OUTPUT frames the answer accordingly and does not default to an incompatible U.S. or other foreign system.",
+        "Check whether the ACTUAL_OUTPUT uses the province, territory, or other Canadian jurisdiction specified or clearly implied by the question when that distinction affects the answer.",
+        "Check whether relevant Canadian terms, place names, and institutional references are interpreted consistently with the question's context. Do not require an exact agency name or additional Canadian references when a concise, functionally correct contextual response meets the request.",
+        "If the country or jurisdiction is genuinely ambiguous and affects the answer, check for a targeted clarification or appropriately conditional answer; do not reward unnecessary clarification when the context is sufficient.",
+        "Judge the response's geographic and jurisdictional framing against the actual cues, without scoring response length, detailed policy correctness, or broader factual recall that belongs to another metric."
+      ],
+      "steps_provenance": [
+        {
+          "step_id": "M1-S1",
+          "source_candidate_ids": [
+            "M1-R1-01",
+            "M1-R3-01",
+            "M1-R4-01"
+          ],
+          "rationale": "Combines explicit and implicit cue detection, but removes the assumption that every question is Canadian."
+        },
+        {
+          "step_id": "M1-S2",
+          "source_candidate_ids": [
+            "M1-R1-02",
+            "M1-R3-05",
+            "M1-R4-05"
+          ],
+          "rationale": "Merges Canadian framing and foreign-assumption checks."
+        },
+        {
+          "step_id": "M1-S3",
+          "source_candidate_ids": [
+            "M1-R1-04",
+            "M1-R3-03",
+            "M1-R4-04"
+          ],
+          "rationale": "Keeps jurisdiction recognition but not institutional correctness beyond the context cue."
+        },
+        {
+          "step_id": "M1-S4",
+          "source_candidate_ids": [
+            "M1-R1-03",
+            "M1-R2-04",
+            "M1-R4-03"
+          ],
+          "rationale": "Retains distinctive Canadian cue recognition without rewarding superficial mentions."
+        },
+        {
+          "step_id": "M1-S5",
+          "source_candidate_ids": [
+            "M1-R3-04",
+            "M1-R4-07",
+            "M1-R1-05"
+          ],
+          "rationale": "Uses the strongest boundary condition from run 3 and run 4."
+        },
+        {
+          "step_id": "M1-S6",
+          "source_candidate_ids": [
+            "M1-R1-06",
+            "M1-R3-06"
+          ],
+          "rationale": "Keeps scope focused on M1 instead of duplicating M2 or M7."
+        }
+      ],
+      "rubric_0_to_10": [
+        {
+          "min": 0,
+          "max": 2,
+          "expected_outcome": "Completely misses essential Canadian context or substitutes an incompatible foreign framework."
+        },
+        {
+          "min": 3,
+          "max": 4,
+          "expected_outcome": "Partially recognizes Canada but misidentifies important context or jurisdiction."
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "expected_outcome": "Recognizes the main Canadian context but misses relevant implicit cues or distinctions."
+        },
+        {
+          "min": 7,
+          "max": 8,
+          "expected_outcome": "Correctly identifies nearly all relevant Canadian contextual requirements with minor omissions."
+        },
+        {
+          "min": 9,
+          "max": 10,
+          "expected_outcome": "Accurately recognizes and applies all necessary contextual and jurisdictional cues without inappropriate assumptions."
+        }
+      ]
+    },
+    {
+      "metric_id": "M2",
+      "name": "Canadian Institutional & Regional Understanding",
+      "criteria": "Understands Canadian institutions, levels of government, responsibilities, and relevant differences between jurisdictions.",
+      "scope_exclusions": "Assess correct roles and relationships, not mere institution name recall; don't demand irrelevant lists of provinces or institutions.",
+      "required_evaluation_params": [
+        "INPUT",
+        "ACTUAL_OUTPUT",
+        "EXPECTED_OUTPUT",
+        "CONTEXT"
+      ],
+      "optional_evaluation_params": [],
+      "evaluation_steps": [
+        "Identify the Canadian institution(s), government level(s), jurisdictions, and responsibilities actually relevant to the INPUT using the verified reference requirements.",
+        "Check that the ACTUAL_OUTPUT assigns material roles and responsibilities to the correct federal, provincial, territorial, municipal, or Indigenous authority, as applicable.",
+        "Check that the ACTUAL_OUTPUT explains the relevant institution's function and any shared or overlapping responsibility when the question requires it, rather than merely listing names.",
+        "Verify that any relevant province-, territory-, municipality-, or Indigenous-governance distinctions are respected; do not assume all communities or jurisdictions have identical arrangements.",
+        "Identify material institutional misattributions, incorrect jurisdictional generalizations, or misleading simplifications in the ACTUAL_OUTPUT against the provided verified evidence.",
+        "Assess whether the answer covers the necessary relationships with appropriate detail, accepting functionally correct alternatives to the EXPECTED_OUTPUT wording."
+      ],
+      "steps_provenance": [
+        {
+          "step_id": "M2-S1",
+          "source_candidate_ids": [
+            "M2-R1-01",
+            "M2-R2-01",
+            "M2-R4-01"
+          ],
+          "rationale": "Focuses the judge on the institutional relationship asked."
+        },
+        {
+          "step_id": "M2-S2",
+          "source_candidate_ids": [
+            "M2-R1-05",
+            "M2-R2-02",
+            "M2-R3-02"
+          ],
+          "rationale": "Preserves accurate responsibility attribution as the central check."
+        },
+        {
+          "step_id": "M2-S3",
+          "source_candidate_ids": [
+            "M2-R1-02",
+            "M2-R2-06",
+            "M2-R4-05"
+          ],
+          "rationale": "Distinguishes real institutional understanding from fact recall."
+        },
+        {
+          "step_id": "M2-S4",
+          "source_candidate_ids": [
+            "M2-R1-03",
+            "M2-R1-04",
+            "M2-R3-04"
+          ],
+          "rationale": "Includes Indigenous governance and regional differences only when relevant."
+        },
+        {
+          "step_id": "M2-S5",
+          "source_candidate_ids": [
+            "M2-R1-07",
+            "M2-R3-05",
+            "M2-R4-04"
+          ],
+          "rationale": "Combines substantive errors and avoids false strict exact-match."
+        },
+        {
+          "step_id": "M2-S6",
+          "source_candidate_ids": [
+            "M2-R3-06",
+            "M2-R4-06"
+          ],
+          "rationale": "Rewards coverage and relationships, not verbatim reference matching."
+        }
+      ],
+      "rubric_0_to_10": [
+        {
+          "min": 0,
+          "max": 2,
+          "expected_outcome": "Fundamentally misunderstands relevant institutions or governmental responsibilities."
+        },
+        {
+          "min": 3,
+          "max": 4,
+          "expected_outcome": "Recognizes some institutions but makes important jurisdictional mistakes."
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "expected_outcome": "Understands the main institutional structure while missing material distinctions."
+        },
+        {
+          "min": 7,
+          "max": 8,
+          "expected_outcome": "Correctly explains relevant responsibilities with only minor omissions."
+        },
+        {
+          "min": 9,
+          "max": 10,
+          "expected_outcome": "Precisely distinguishes all applicable institutional and regional responsibilities supported by the evidence."
+        }
+      ]
+    },
+    {
+      "metric_id": "M3",
+      "name": "Canadian Knowledge Application",
+      "criteria": "Applies Canadian knowledge and constraints to a particular situation or novel scenario.",
+      "scope_exclusions": "Requires reasoning or context-sensitive application, not fact recitation. Require actionable next steps only when the question asks for action.",
+      "required_evaluation_params": [
+        "INPUT",
+        "ACTUAL_OUTPUT",
+        "EXPECTED_OUTPUT",
+        "CONTEXT"
+      ],
+      "optional_evaluation_params": [],
+      "evaluation_steps": [
+        "Identify the user's actual goal or scenario, the relevant Canadian setting, and the material constraints or conditions stated in the INPUT and verified reference.",
+        "Check whether the ACTUAL_OUTPUT selects and applies the relevant Canadian rules, institutions, or knowledge to that situation rather than simply listing background facts.",
+        "Check the response's reasoning across important conditions (e.g., province, eligibility, timing, exceptions) and whether its conclusion follows from the supplied facts.",
+        "Determine whether the ACTUAL_OUTPUT answers the task the INPUT actually requests: an adequate explanation for an explanatory question, or feasible next steps when practical guidance is requested. Do not require actionable steps for explanation-only questions.",
+        "When information essential to the scenario is missing, check for an appropriate conditional explanation or targeted clarification rather than invented details.",
+        "Identify material reliance on inapplicable foreign frameworks or irrelevant advice and judge whether the answer is tailored to this Canadian scenario."
+      ],
+      "steps_provenance": [
+        {
+          "step_id": "M3-S1",
+          "source_candidate_ids": [
+            "M3-R3-01",
+            "M3-R4-01",
+            "M3-R2-01"
+          ],
+          "rationale": "Replaces generic Canada detection with understanding of a concrete user task."
+        },
+        {
+          "step_id": "M3-S2",
+          "source_candidate_ids": [
+            "M3-R2-02",
+            "M3-R3-02",
+            "M3-R2-06"
+          ],
+          "rationale": "Tests application, not recall."
+        },
+        {
+          "step_id": "M3-S3",
+          "source_candidate_ids": [
+            "M3-R1-03",
+            "M3-R2-03",
+            "M3-R3-03"
+          ],
+          "rationale": "Preserves constraint-sensitive reasoning."
+        },
+        {
+          "step_id": "M3-S4",
+          "source_candidate_ids": [
+            "M3-R2-07",
+            "M3-R4-07",
+            "M3-R3-07"
+          ],
+          "rationale": "Fixes 'actionable steps always mandatory' overreach."
+        },
+        {
+          "step_id": "M3-S5",
+          "source_candidate_ids": [
+            "M3-R2-04",
+            "M3-R4-04"
+          ],
+          "rationale": "Scores use of available information with calibrated limits."
+        },
+        {
+          "step_id": "M3-S6",
+          "source_candidate_ids": [
+            "M3-R1-05",
+            "M3-R2-05",
+            "M3-R4-06"
+          ],
+          "rationale": "Consolidates foreign-system checks into one relevant scope item."
+        }
+      ],
+      "rubric_0_to_10": [
+        {
+          "min": 0,
+          "max": 2,
+          "expected_outcome": "Fails to apply the relevant Canadian knowledge to the task or reaches a materially wrong conclusion."
+        },
+        {
+          "min": 3,
+          "max": 4,
+          "expected_outcome": "Identifies some relevant context but misapplies it or leaves the requested explanation or solution substantially incomplete."
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "expected_outcome": "Offers partially workable reasoning while overlooking important conditions."
+        },
+        {
+          "min": 7,
+          "max": 8,
+          "expected_outcome": "Applies knowledge correctly to most aspects of the situation with minor omissions."
+        },
+        {
+          "min": 9,
+          "max": 10,
+          "expected_outcome": "Applies the relevant Canadian knowledge and conditions accurately and logically to fully answer the specific explanatory or practical task."
+        }
+      ]
+    },
+    {
+      "metric_id": "M4",
+      "name": "Canadian Language & Terminology",
+      "criteria": "Uses the requested language(s) and appropriate Canadian English, Canadian French, or bilingual terminology clearly and naturally.",
+      "scope_exclusions": "Do not demand bilingual output, the word 'Canada', or fixed spelling variants unless explicitly required; score communication, not general factual knowledge.",
+      "required_evaluation_params": [
+        "INPUT",
+        "ACTUAL_OUTPUT"
+      ],
+      "optional_evaluation_params": [
+        "EXPECTED_OUTPUT",
+        "CONTEXT"
+      ],
+      "evaluation_steps": [
+        "Determine which language(s), translation direction, tone, and regional language conventions the INPUT actually requests, if any.",
+        "Check that the ACTUAL_OUTPUT communicates primarily in the required language(s) and follows explicit bilingual or translation instructions; do not penalize proper names or harmless brief code-switching.",
+        "Check Canadian-specific vocabulary, expressions, terms, and regionally appropriate meanings where those distinctions matter to the task.",
+        "Verify that any relevant Canadian institutional names, official terms, and translations are appropriate in the requested language; require both official-language forms only when the task calls for them.",
+        "Assess linguistic clarity, grammar, naturalness, and register for the intended Canadian audience. Do not deduct for factual inaccuracies unrelated to language or for a lack of forced Canadianisms; factual truth belongs to the appropriate factual metric.",
+        "Flag terminology whose meaning is materially misleading in the relevant Canadian English/French variety. Accept valid regional, register, spelling, and idiomatic alternatives; do not infer a mandatory preference where recognized variants coexist."
+      ],
+      "steps_provenance": [
+        {
+          "step_id": "M4-S1",
+          "source_candidate_ids": [
+            "M4-R1-01",
+            "M4-R3-01",
+            "M4-R4-01"
+          ],
+          "rationale": "Makes task requirement explicit before judging wording."
+        },
+        {
+          "step_id": "M4-S2",
+          "source_candidate_ids": [
+            "M4-R3-04",
+            "M4-R4-06",
+            "M4-R2-01"
+          ],
+          "rationale": "Keeps the requested language without overstrict all-one-language requirement."
+        },
+        {
+          "step_id": "M4-S3",
+          "source_candidate_ids": [
+            "M4-R1-02",
+            "M4-R2-05",
+            "M4-R3-02"
+          ],
+          "rationale": "Prioritizes actual Canadian linguistic meaning over spelling trivia."
+        },
+        {
+          "step_id": "M4-S4",
+          "source_candidate_ids": [
+            "M4-R1-03",
+            "M4-R3-03",
+            "M4-R4-03"
+          ],
+          "rationale": "Retains bilingual nomenclature but conditions it on relevance."
+        },
+        {
+          "step_id": "M4-S5",
+          "source_candidate_ids": [
+            "M4-R1-06",
+            "M4-R2-06",
+            "M4-R4-05"
+          ],
+          "rationale": "General communication matters only as it affects this metric."
+        },
+        {
+          "step_id": "M4-S6",
+          "source_candidate_ids": [
+            "M4-R4-04",
+            "M4-R3-05",
+            "M4-R4-06"
+          ],
+          "rationale": "Eliminates spurious penalties for acceptable variants."
+        }
+      ],
+      "rubric_0_to_10": [
+        {
+          "min": 0,
+          "max": 2,
+          "expected_outcome": "Uses seriously inappropriate or misleading terminology or fails the requested language requirement."
+        },
+        {
+          "min": 3,
+          "max": 4,
+          "expected_outcome": "Uses partially appropriate language but contains significant terminology or language errors."
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "expected_outcome": "Communicates understandably with noticeable Canadian-specific language deficiencies."
+        },
+        {
+          "min": 7,
+          "max": 8,
+          "expected_outcome": "Uses appropriate terminology and language with minor, noncritical issues."
+        },
+        {
+          "min": 9,
+          "max": 10,
+          "expected_outcome": "Communicates naturally, precisely, and appropriately in the requested language and Canadian context."
+        }
+      ]
+    },
+    {
+      "metric_id": "M5",
+      "name": "Canadian Cultural & Societal Understanding",
+      "criteria": "Demonstrates accurate, relevant understanding of Canadian cultures, histories, Indigenous distinctions, societal practices, and regional differences.",
+      "scope_exclusions": "Cultural nuance should be task-relevant; do not require generic diversity statements or treat Indigenous communities as interchangeable.",
+      "required_evaluation_params": [
+        "INPUT",
+        "ACTUAL_OUTPUT",
+        "EXPECTED_OUTPUT",
+        "CONTEXT"
+      ],
+      "optional_evaluation_params": [],
+      "evaluation_steps": [
+        "Identify the cultural, historical, social, Indigenous, or regional knowledge actually required by the INPUT and verified reference evidence.",
+        "Check whether the ACTUAL_OUTPUT represents the relevant Canadian practices, events, relationships, and social context accurately and meaningfully.",
+        "When Indigenous peoples or communities are relevant, check that distinctions among First Nations, Inuit, Métis, and specific nations/communities are accurately conveyed where material. Do not require an answer to repeat every group name already in the question if no meaningful distinction has been lost.",
+        "Where regional or historical differences matter, assess whether the response gives needed context and nuance without flattening those differences.",
+        "Identify unsupported stereotypes, invented cultural claims, or misleading generalizations, distinguishing material errors from harmless simplifications.",
+        "Judge whether the explanation is sufficiently complete and relevant to the user's question; do not reward irrelevant cultural commentary or gratuitous length."
+      ],
+      "steps_provenance": [
+        {
+          "step_id": "M5-S1",
+          "source_candidate_ids": [
+            "M5-R1-01",
+            "M5-R2-01"
+          ],
+          "rationale": "Scopes the assessment to the question instead of general cultural performance."
+        },
+        {
+          "step_id": "M5-S2",
+          "source_candidate_ids": [
+            "M5-R1-02",
+            "M5-R3-05"
+          ],
+          "rationale": "Measures substantive understanding, not generic assertions."
+        },
+        {
+          "step_id": "M5-S3",
+          "source_candidate_ids": [
+            "M5-R3-03",
+            "M5-R4-02"
+          ],
+          "rationale": "Includes important Indigenous distinctions without adding irrelevant requirements."
+        },
+        {
+          "step_id": "M5-S4",
+          "source_candidate_ids": [
+            "M5-R1-03",
+            "M5-R3-04",
+            "M5-R2-05"
+          ],
+          "rationale": "Preserves relevant regional and historical nuance."
+        },
+        {
+          "step_id": "M5-S5",
+          "source_candidate_ids": [
+            "M5-R1-04",
+            "M5-R2-06",
+            "M5-R4-04"
+          ],
+          "rationale": "Emphasizes harmful factual distortion and avoids excessive stylistic penalties."
+        },
+        {
+          "step_id": "M5-S6",
+          "source_candidate_ids": [
+            "M5-R1-05",
+            "M5-R4-05",
+            "M5-R3-06"
+          ],
+          "rationale": "Separates cultural depth from verbose filler."
+        }
+      ],
+      "rubric_0_to_10": [
+        {
+          "min": 0,
+          "max": 2,
+          "expected_outcome": "Fundamentally misrepresents relevant Canadian social or cultural realities or relies on serious unsupported stereotypes."
+        },
+        {
+          "min": 3,
+          "max": 4,
+          "expected_outcome": "Demonstrates limited understanding with substantial generalizations or inaccuracies."
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "expected_outcome": "Shows basic awareness but misses material nuance or relevant diversity."
+        },
+        {
+          "min": 7,
+          "max": 8,
+          "expected_outcome": "Provides accurate and appropriately nuanced cultural understanding with minor omissions."
+        },
+        {
+          "min": 9,
+          "max": 10,
+          "expected_outcome": "Demonstrates precise, relevant, balanced understanding of the cultural or societal context without unsupported generalization."
+        }
+      ]
+    },
+    {
+      "metric_id": "M6",
+      "name": "Canadian Factual Reliability & Uncertainty",
+      "criteria": "Avoids unsupported or fabricated claims and appropriately calibrates confidence, qualifications, and requests for clarification.",
+      "scope_exclusions": "Do not punish true additional facts merely because they are absent from the reference excerpt. Missing evidence warrants 'unverified', not automatically 'false'.",
+      "required_evaluation_params": [
+        "INPUT",
+        "ACTUAL_OUTPUT",
+        "EXPECTED_OUTPUT",
+        "CONTEXT"
+      ],
+      "optional_evaluation_params": [],
+      "evaluation_steps": [
+        "Identify which facts can be established from the verified reference evidence and which material details remain uncertain, conditional, time-sensitive, or jurisdiction-dependent.",
+        "Extract the material factual claims in ACTUAL_OUTPUT and classify each, using supplied verified evidence only, as supported, contradicted, or not assessable. Do not treat the judge's independent recollection as source verification; route material unverified claims for evidence review instead of declaring them true or false.",
+        "Check for demonstrably fabricated programs, policies, institutions, citations, numbers, and claims of external verification. Treat a claim that a source was checked as fabricated only if the provided evaluation setup (for example, closed-book without browsing) or tool/trace evidence establishes the claimed check did not occur; otherwise mark the verification claim unverified and request trace review.",
+        "Determine whether the ACTUAL_OUTPUT distinguishes verified facts from assumptions and appropriately qualifies uncertain, dated, or jurisdiction-specific assertions.",
+        "Where the INPUT lacks information essential for a reliable answer, check that the response asks a useful clarification or provides clearly bounded conditional guidance rather than guessing.",
+        "Assess calibration of confidence and evidential reliability, penalizing materially unjustified certainty or unnecessary refusal when an answer is knowable. Do not penalize an additional accurate, evidence-supported fact merely because it is optional or makes the answer longer."
+      ],
+      "steps_provenance": [
+        {
+          "step_id": "M6-S1",
+          "source_candidate_ids": [
+            "M6-R3-01",
+            "M6-R2-04",
+            "M6-R4-03"
+          ],
+          "rationale": "Defines evidence limits before judging reliability."
+        },
+        {
+          "step_id": "M6-S2",
+          "source_candidate_ids": [
+            "M6-R1-01",
+            "M6-R2-01",
+            "M6-R4-01"
+          ],
+          "rationale": "Fixes the unsupported=wrong fallacy and no-live-browsing issue."
+        },
+        {
+          "step_id": "M6-S3",
+          "source_candidate_ids": [
+            "M6-R1-02",
+            "M6-R3-04",
+            "M6-R4-06"
+          ],
+          "rationale": "Targets observable hallucination and false source-claims."
+        },
+        {
+          "step_id": "M6-S4",
+          "source_candidate_ids": [
+            "M6-R1-03",
+            "M6-R2-03",
+            "M6-R3-03"
+          ],
+          "rationale": "Rewards confidence calibration rather than generic hedging."
+        },
+        {
+          "step_id": "M6-S5",
+          "source_candidate_ids": [
+            "M6-R1-04",
+            "M6-R3-05",
+            "M6-R4-04"
+          ],
+          "rationale": "Separates correct uncertainty from unsupported specifics."
+        },
+        {
+          "step_id": "M6-S6",
+          "source_candidate_ids": [
+            "M6-R3-07",
+            "M6-R2-06"
+          ],
+          "rationale": "Prevents rewarding hedging for its own sake and keeps M6 distinct from M7."
+        }
+      ],
+      "rubric_0_to_10": [
+        {
+          "min": 0,
+          "max": 2,
+          "expected_outcome": "Contains major unsupported claims, fabrications, or dangerously unjustified certainty."
+        },
+        {
+          "min": 3,
+          "max": 4,
+          "expected_outcome": "Contains significant unsupported claims or fails to acknowledge important uncertainty."
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "expected_outcome": "Is partly grounded but includes overconfident statements or material uncertainty-handling weaknesses."
+        },
+        {
+          "min": 7,
+          "max": 8,
+          "expected_outcome": "Is generally well grounded, with appropriately calibrated claims and only minor weaknesses."
+        },
+        {
+          "min": 9,
+          "max": 10,
+          "expected_outcome": "Consistently distinguishes supported facts from uncertainty, avoids fabrication, and communicates limitations precisely."
+        }
+      ]
+    },
+    {
+      "metric_id": "M7",
+      "name": "Canadian Factual Knowledge",
+      "criteria": "Measures correctness and necessary completeness of Canadian factual answers against verified reference requirements.",
+      "scope_exclusions": "Do not score writing style, general application, or length; do not claim improvement proves a fact was newly acquired during training.",
+      "required_evaluation_params": [
+        "INPUT",
+        "ACTUAL_OUTPUT",
+        "EXPECTED_OUTPUT",
+        "CONTEXT"
+      ],
+      "optional_evaluation_params": [],
+      "evaluation_steps": [
+        "Identify the specific Canadian facts the INPUT asks for, including mandatory facts and applicable dates, jurisdictions, or conditions from the verified benchmark reference.",
+        "Extract the factual claims the ACTUAL_OUTPUT makes in answering the question, including material additional claims and qualifications.",
+        "Check each material answer claim for correctness against the supplied verified reference evidence; flag claims outside the available evidence as unverified, not automatically false.",
+        "Check whether all mandatory facts are correctly covered, allowing faithful paraphrases and genuinely equivalent facts instead of literal matching to EXPECTED_OUTPUT.",
+        "Assess whether factual statements properly respect the relevant year, province/territory, population, exception, or other qualification; identify material contradictions.",
+        "Assign an accuracy-and-required-completeness judgment based on verified material claims and omissions. Accept concise or longer equivalent accurate answers without verbosity bonuses or penalties; leave writing style and practical reasoning to other metrics."
+      ],
+      "steps_provenance": [
+        {
+          "step_id": "M7-S1",
+          "source_candidate_ids": [
+            "M7-R1-02",
+            "M7-R3-04",
+            "M7-R4-06"
+          ],
+          "rationale": "Starts from actual answer requirements rather than claiming the input contains all facts."
+        },
+        {
+          "step_id": "M7-S2",
+          "source_candidate_ids": [
+            "M7-R2-01",
+            "M7-R3-01",
+            "M7-R4-02"
+          ],
+          "rationale": "Keeps fact identification on model response, not user question."
+        },
+        {
+          "step_id": "M7-S3",
+          "source_candidate_ids": [
+            "M7-R1-03",
+            "M7-R4-03",
+            "M7-R2-02"
+          ],
+          "rationale": "Replaces unimplemented instruction to browse external sources."
+        },
+        {
+          "step_id": "M7-S4",
+          "source_candidate_ids": [
+            "M7-R2-03",
+            "M7-R3-03",
+            "M7-R3-05"
+          ],
+          "rationale": "Measures true completeness without rewarding verbatim matching."
+        },
+        {
+          "step_id": "M7-S5",
+          "source_candidate_ids": [
+            "M7-R4-06",
+            "M7-R2-04",
+            "M7-R1-06"
+          ],
+          "rationale": "Explicitly handles historical and jurisdictional accuracy."
+        },
+        {
+          "step_id": "M7-S6",
+          "source_candidate_ids": [
+            "M7-R3-06",
+            "M7-R2-06",
+            "M7-R4-07"
+          ],
+          "rationale": "Clean scoring focus for M7."
+        }
+      ],
+      "rubric_0_to_10": [
+        {
+          "min": 0,
+          "max": 2,
+          "expected_outcome": "Provides predominantly incorrect or seriously misleading Canadian facts."
+        },
+        {
+          "min": 3,
+          "max": 4,
+          "expected_outcome": "Recalls some correct information but includes major factual errors or omissions."
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "expected_outcome": "Demonstrates partial factual knowledge with important missing or incorrect details."
+        },
+        {
+          "min": 7,
+          "max": 8,
+          "expected_outcome": "Provides mostly correct and sufficiently complete Canadian facts with minor inaccuracies."
+        },
+        {
+          "min": 9,
+          "max": 10,
+          "expected_outcome": "Provides accurate, appropriately complete factual information consistent with verified reference evidence."
+        }
+      ]
+    }
+  ],
+  "supersedes_proposal": "2026-11-03-v1",
+  "provenance_notice": "Original 177 candidate steps and November 3 selected 42 are preserved separately; this is a versioned reviewer proposal, not an overwrite.",
+  "decision_protocol": {
+    "eligibility": "Score a metric only when the question actually targets it and evidence needed for that metric is sufficiently verified. Use N/A otherwise; use evidence_not_ready rather than scoring unsupported factual cases.",
+    "unit_of_scoring": "Return one holistic integer 0-10 for each applicable metric, using six steps as diagnostic checks and the metric-specific bands as score anchors. Do not score each step 0-10 or average six step scores.",
+    "severity": "Score according to material correctness, user impact, jurisdictional/date qualifications, and task requirements. Minor wording differences, equivalent paraphrases, or accurate optional detail must not lower score.",
+    "source_limit": "The judge may compare only supplied verified evidence to response claims. Unverified is not false; flag important unsupported extra claims for audit, and do not invoke the judge’s external memory as evidence.",
+    "fabricated_verification": "A claimed source check is confirmed fabricated only when the supplied evaluation setup or tool/trace evidence establishes that no such check occurred. If trace is missing, flag it as unverified and require trace review, not definitive fabrication.",
+    "conditional_caps_proposed_for_human_decision": [
+      {
+        "condition": "Proven materially fabricated external source check, supported by trace logs",
+        "maximum_raw_score": 4,
+        "metric": "M6",
+        "status": "needs_human_approval"
+      },
+      {
+        "condition": "Proven materially false consequential eligibility/policy claim stated with certainty",
+        "maximum_raw_score": 2,
+        "metric": "M6",
+        "status": "needs_human_approval"
+      }
+    ],
+    "scoring_output": [
+      "metric_id",
+      "applicability",
+      "integer_score_0_to_10",
+      "normalized_score",
+      "material_evidence_citations",
+      "positive_findings",
+      "material_errors",
+      "unverified_claims",
+      "rationale",
+      "flags_for_human_review"
+    ],
+    "normalization": "integer raw score / 10; probability-weighted vendor/judge scores are not interchangeable without calibration",
+    "go_live_gate": "Human labels on independently adjudicated cases, reliability/construct-boundary checks, bilingual calibration, and held-out versioned pilot; freeze steps, evidence policy, model revision and prompt then."
+  },
+  "change_log": [
+    {
+      "id": "M1-S4",
+      "kind": "step",
+      "old": "Check that relevant Canadian terms, place names, and institutional references are interpreted consistently with the question's context, without requiring unnecessary name-dropping.",
+      "new": "Check whether relevant Canadian terms, place names, and institutional references are interpreted consistently with the question's context. Do not require an exact agency name or additional Canadian references when a concise, functionally correct contextual response meets the request.",
+      "reason": "Calibration found a length/agency-name preference on a context-only question; protect concise equivalent answers."
+    },
+    {
+      "id": "M1-S6",
+      "kind": "step",
+      "old": "Assess whether the overall framing fits the cues that are actually present; judge recognition and assumptions, not the correctness of every policy detail.",
+      "new": "Judge the response's geographic and jurisdictional framing against the actual cues, without scoring response length, detailed policy correctness, or broader factual recall that belongs to another metric.",
+      "reason": "Reinforces M1-only construct boundaries and discourages rewarding verbose responses."
+    },
+    {
+      "id": "M3-S4",
+      "kind": "step",
+      "old": "Assess whether the response actually resolves the requested task or gives feasible practical guidance where requested; do not require a checklist of next steps for explanatory questions.",
+      "new": "Determine whether the ACTUAL_OUTPUT answers the task the INPUT actually requests: an adequate explanation for an explanatory question, or feasible next steps when practical guidance is requested. Do not require actionable steps for explanation-only questions.",
+      "reason": "Calibration identified risk that practical-guidance language biases explanation-only questions."
+    },
+    {
+      "id": "M3-rubric-0-2",
+      "kind": "rubric",
+      "old": "Provides unusable advice or reasoning based on fundamentally inappropriate assumptions.",
+      "new": "Fails to apply the relevant Canadian knowledge to the task or reaches a materially wrong conclusion.",
+      "reason": "Make anchor valid for explanatory as well as practical scenarios."
+    },
+    {
+      "id": "M3-rubric-3-4",
+      "kind": "rubric",
+      "old": "Provides some relevant information but incorrect or substantially incomplete practical guidance.",
+      "new": "Identifies some relevant context but misapplies it or leaves the requested explanation or solution substantially incomplete.",
+      "reason": "Do not assume every M3 question asks for advice."
+    },
+    {
+      "id": "M3-rubric-9-10",
+      "kind": "rubric",
+      "old": "Applies Canadian knowledge accurately, logically, and appropriately to the entire practical situation.",
+      "new": "Applies the relevant Canadian knowledge and conditions accurately and logically to fully answer the specific explanatory or practical task.",
+      "reason": "Reward fulfilling the actual question, not providing extra action steps."
+    },
+    {
+      "id": "M4-S5",
+      "kind": "step",
+      "old": "Assess overall naturalness, grammar, clarity, and suitable register for the intended Canadian audience, without rewarding forced Canadianisms.",
+      "new": "Assess linguistic clarity, grammar, naturalness, and register for the intended Canadian audience. Do not deduct for factual inaccuracies unrelated to language or for a lack of forced Canadianisms; factual truth belongs to the appropriate factual metric.",
+      "reason": "Calibration showed factual correctness leaking into language scoring."
+    },
+    {
+      "id": "M4-S6",
+      "kind": "step",
+      "old": "Flag materially misleading foreign terminology or incorrect Canadian-language meanings, but do not penalize harmless English/French spelling variants unless specifically requested.",
+      "new": "Flag terminology whose meaning is materially misleading in the relevant Canadian English/French variety. Accept valid regional, register, spelling, and idiomatic alternatives; do not infer a mandatory preference where recognized variants coexist.",
+      "reason": "French-language pilot had debatable preferences and a sizable repeated-score spread."
+    },
+    {
+      "id": "M5-S3",
+      "kind": "step",
+      "old": "Where Indigenous peoples or communities are relevant, check that the answer respects First Nations, Inuit, Métis, and nation/community-specific distinctions instead of treating them as one group.",
+      "new": "When Indigenous peoples or communities are relevant, check that distinctions among First Nations, Inuit, Métis, and specific nations/communities are accurately conveyed where material. Do not require an answer to repeat every group name already in the question if no meaningful distinction has been lost.",
+      "reason": "Calibration found a possible penalty for not reiterating names already supplied in the question."
+    },
+    {
+      "id": "M6-S2",
+      "kind": "step",
+      "old": "Extract material factual assertions from the ACTUAL_OUTPUT and assess whether they are supported, contradicted, or not assessable using the supplied verified evidence; do not invent independent verification.",
+      "new": "Extract the material factual claims in ACTUAL_OUTPUT and classify each, using supplied verified evidence only, as supported, contradicted, or not assessable. Do not treat the judge's independent recollection as source verification; route material unverified claims for evidence review instead of declaring them true or false.",
+      "reason": "Pilot reasoning invoked judge memory to call an unevidenced extra claim true."
+    },
+    {
+      "id": "M6-S3",
+      "kind": "step",
+      "old": "Check for fabricated or demonstrably incorrect programs, policies, institutions, citations, precise numbers, or claims of having checked a source when no such check occurred.",
+      "new": "Check for demonstrably fabricated programs, policies, institutions, citations, numbers, and claims of external verification. Treat a claim that a source was checked as fabricated only if the provided evaluation setup (for example, closed-book without browsing) or tool/trace evidence establishes the claimed check did not occur; otherwise mark the verification claim unverified and request trace review.",
+      "reason": "Calibration produced inconsistent fabricated-verification scores; avoid false allegations without trace evidence."
+    },
+    {
+      "id": "M6-S6",
+      "kind": "step",
+      "old": "Penalize materially unjustified certainty, invented verification, or unnecessary evasion when the answer is knowable; assess reliability rather than mere refusal or raw factual coverage.",
+      "new": "Assess calibration of confidence and evidential reliability, penalizing materially unjustified certainty or unnecessary refusal when an answer is knowable. Do not penalize an additional accurate, evidence-supported fact merely because it is optional or makes the answer longer.",
+      "reason": "Supported extra information was sometimes penalized for verbosity instead of reliability."
+    },
+    {
+      "id": "M7-S6",
+      "kind": "step",
+      "old": "Assign an accuracy-and-completeness judgment based on correct required facts and material errors; do not reward verbosity or conflate factual recall with reasoning or communication style.",
+      "new": "Assign an accuracy-and-required-completeness judgment based on verified material claims and omissions. Accept concise or longer equivalent accurate answers without verbosity bonuses or penalties; leave writing style and practical reasoning to other metrics.",
+      "reason": "Protect against length bias and maintain factual-knowledge construct."
+    }
+  ]
+}

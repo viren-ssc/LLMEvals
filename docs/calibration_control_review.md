@@ -1,0 +1,9 @@
+# Review of the synthetic controls themselves
+
+Calibration labels and controls can be wrong or ambiguous. They must be reviewed alongside judge behavior rather than treated as human ground truth.
+
+The initial French contrast (`CAL-M4-FRENCH-VARIANT` versus `CAL-M4-FRENCH-ALTERNATIVE`) substitutes *week-end* for *fin de semaine*. After observing its scores, a source review found that the [OQLF entry](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8361442/fin-de-semaine) describes both forms as occurring in Quebec, while preferring *fin de semaine* and noting reservations about *week-end* in the Quebec sociolinguistic norm. Consequently, that contrast alone cannot establish unfair treatment of an unambiguously equivalent Canadian French form. Its synthetic high-score expectation remains preserved in the original data as an author hypothesis requiring revision or adjudication, not silently changed after observing results.
+
+A **separate, versioned two-case supplement** was therefore added at `data/calibration/french_supplement_v1.jsonl`, retaining *fin de semaine* in both responses and varying only *pendant* versus *durant*. It uses the same six final M4 steps and rubric, three repeats each, in `outputs/calibration/final_v1_french_supplement_20261103_01/`. The original 51-case dataset and all original results remain unchanged. This contrast still needs human linguistic review, but avoids the documented lexical-norm ambiguity of the initial pair.
+
+Other deliberate synthetic ranges are also hypotheses: a partly correct answer with fabricated verification may receive partial credit depending on interpretation of materiality; a cultural explanation may be adequate without repeating names already in the question. Reports preserve exact explanations and diagnostic ranges to let human reviewers adjudicate these questions. No synthetic target range substitutes for a real independent human label.
