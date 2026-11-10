@@ -1,0 +1,5 @@
+# Additional retrieval dependencies for the local verification pipeline.
+# Install the main project dependencies first (requirements-lock.txt).
+pypdf==6.21.4
+warcio==1.8.2
+six==1.17.0

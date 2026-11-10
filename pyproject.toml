@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "canadianness-geval"
+version = "0.1.0"
+description = "Human-reviewed Canadian-ness GEval research framework"
+requires-python = ">=3.11"
+dependencies = ["deepeval==4.3.2", "pydantic>=2,<3", "httpx>=0.28,<1", "pandas>=2,<4", "openpyxl>=3.1,<4", "python-dotenv>=1,<2", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.11"]
+verification = ["pypdf>=5,<7", "warcio>=1.7,<2"]
+
+[project.scripts]
+canadianness-eval = "canadianness_eval.cli:main"
+canadian-verify = "canadianness_eval.verification.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: explicit remote API checks"]
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
