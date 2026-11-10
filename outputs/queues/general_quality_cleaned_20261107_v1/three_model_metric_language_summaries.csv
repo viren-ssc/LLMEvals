@@ -1,0 +1,19 @@
+﻿evaluated_model,evaluation_metric,grouping,tasks,mean_score,evidence_review_required,result_label,language
+apertus,completeness,evaluated_model/evaluation_metric,756,0.6798941798941799,105,"AI-provisional, pending calibration",
+apertus,correctness,evaluated_model/evaluation_metric,756,0.6891534391534392,73,"AI-provisional, pending calibration",
+gc_llm,completeness,evaluated_model/evaluation_metric,756,0.4636243386243386,114,"AI-provisional, pending calibration",
+gc_llm,correctness,evaluated_model/evaluation_metric,756,0.48214285714285715,73,"AI-provisional, pending calibration",
+llama,completeness,evaluated_model/evaluation_metric,756,0.7183862433862435,88,"AI-provisional, pending calibration",
+llama,correctness,evaluated_model/evaluation_metric,756,0.7591269841269841,51,"AI-provisional, pending calibration",
+apertus,completeness,evaluated_model/evaluation_metric/language,404,0.7037128712871288,49,"AI-provisional, pending calibration",en
+apertus,completeness,evaluated_model/evaluation_metric/language,352,0.6525568181818182,56,"AI-provisional, pending calibration",fr
+apertus,correctness,evaluated_model/evaluation_metric/language,404,0.7086633663366337,45,"AI-provisional, pending calibration",en
+apertus,correctness,evaluated_model/evaluation_metric/language,352,0.6667613636363637,28,"AI-provisional, pending calibration",fr
+gc_llm,completeness,evaluated_model/evaluation_metric/language,404,0.5393564356435644,54,"AI-provisional, pending calibration",en
+gc_llm,completeness,evaluated_model/evaluation_metric/language,352,0.37670454545454546,60,"AI-provisional, pending calibration",fr
+gc_llm,correctness,evaluated_model/evaluation_metric/language,404,0.5556930693069307,39,"AI-provisional, pending calibration",en
+gc_llm,correctness,evaluated_model/evaluation_metric/language,352,0.3977272727272727,34,"AI-provisional, pending calibration",fr
+llama,completeness,evaluated_model/evaluation_metric/language,404,0.7512376237623762,33,"AI-provisional, pending calibration",en
+llama,completeness,evaluated_model/evaluation_metric/language,352,0.6806818181818182,55,"AI-provisional, pending calibration",fr
+llama,correctness,evaluated_model/evaluation_metric/language,404,0.7846534653465347,35,"AI-provisional, pending calibration",en
+llama,correctness,evaluated_model/evaluation_metric/language,352,0.7298295454545454,16,"AI-provisional, pending calibration",fr

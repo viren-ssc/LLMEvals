@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-11-07T14:52:56.265460+00:00",
+  "run_ids": {
+    "temp_0": "llama_full_20261106_v2",
+    "temp_07": "llama_mixed_temperature_workbook_c4_20261107_v2",
+    "cleaned": "llama_cleaned_responses_c4_20261107_v2"
+  },
+  "successful_each": 1814,
+  "successful_total": 5442,
+  "question_metric_triples": 1814,
+  "unique_questions": 756,
+  "cleaning_changed_questions": 8,
+  "cleaning_changed_metric_tasks": 20,
+  "cleaning_unchanged_questions": 748,
+  "cleaning_unchanged_metric_tasks": 1794,
+  "unchanged_pairs_with_score_changes": 865,
+  "unchanged_pair_score_change_rate": 0.4821627647714604,
+  "source_results_sha256": {
+    "temp_0": "44d96ad3113a09815b1bc8d7b13f13fb2223be2e2877b2c521f97efb331798f0",
+    "temp_07": "2337fef1a971a51af97c777a6b9d3277f94c79e5ecdfa9032e968d2a68224c4e",
+    "cleaned": "6889ab54c7e72af95ba5954e453f5fa9c1d47a1abf19e98ec8c2af0b8fcdc8d7"
+  },
+  "rubric_sha256": "bb9889807b7babc8feed6a97ddd0c12c0fa334627e5d295017167fbd0a767cb2",
+  "evaluator_template_sha256": "ecb714aa746f7bdce82d86fd9bcc288d4e26ffd15cfa210bbd19a356e095793f",
+  "generation_temperature_labels": "temp_0 and temp_07 are user-identified; source generation metadata incomplete",
+  "cleaned_condition": "User-provided cleaned version of the temp_07-labelled workbook answers; not newly generated answers",
+  "top_p": "0.95 retrospectively user-reported, not independently verified per run; see earlier Llama annotation",
+  "no_new_judge_requests": true,
+  "existing_runs_unchanged": true,
+  "result_label": "AI-provisional, pending calibration"
+}
