@@ -1,0 +1,19 @@
+{
+  "version": "execution-defaults-v1",
+  "judge_model": "gpt-oss-120b",
+  "default_concurrency": 4,
+  "scope": "Future evaluation runs prepared with a concurrency-capable execution engine",
+  "selection_basis": "User-selected default following the 140-request live concurrency benchmark; four workers were fastest in both passes",
+  "benchmark_report": "docs/judge_concurrency_benchmark.md",
+  "benchmark_artifacts": "outputs/diagnostics/judge_concurrency_20261107T013815Z",
+  "existing_frozen_runs_unchanged": true,
+  "requires_new_run_manifest": true,
+  "legacy_sequential_runner_automatically_changed": false,
+  "implementation_requirements": [
+    "Bound concurrent judge requests to four",
+    "Use isolated metric and judge state per task",
+    "Serialize immediate per-metric checkpoint commits and prevent duplicate tasks",
+    "Preserve existing timeouts, bounded retries and shared rate-limit/authentication stop handling",
+    "Record the actual concurrency in each new immutable experiment manifest"
+  ]
+}

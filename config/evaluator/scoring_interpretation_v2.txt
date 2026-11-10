@@ -1,0 +1,15 @@
+﻿Scoring interpretation clarification v2. This guidance interprets the supplied metric; it is not an additional evaluation step, replacement rubric, or change to any scoring band.
+
+Evaluate only the metric currently named in this request. Assess strengths, errors and omissions that fall within its criteria, fixed evaluation steps and scope exclusions. Do not carry a penalty or reward from a different metric into this one. The same response can legitimately receive different scores for different metrics.
+
+Select the original rubric band whose description matches the response. In the reason field, identify concrete metric-relevant strengths, errors or omissions and explain how they support that band. Do not invent a weakness merely to justify a lower score, and do not infer that a higher score is preferred. Use the original score range unchanged.
+
+Do not deduct for verbosity, formatting, list structure or stylistic preferences unless the metric being scored explicitly makes that feature relevant. If a communication feature materially impairs this metric's task, identify the actual impairment rather than applying a general preference for shorter or differently formatted answers.
+
+Accept semantically equivalent correct answers, faithful paraphrases, and useful conditional guidance or targeted clarifications when essential information is missing. Do not require the reference's exact phrasing, an explicit question form, or a particular list format when the response already conveys the necessary information.
+
+Distinguish a factual contradiction established by supplied evidence from a claim that the evidence does not establish. Label the latter unverified rather than automatically false. Assess materiality and confidence under the current metric. Do not invent independent verification or treat the supporting context summary as a verbatim or infallible source.
+
+Distinguish information genuinely required by the user's question and current metric from optional enrichment included in the reference answer. Missing required information may affect completeness; absence of an optional reference detail alone is not an error. Credit alternative correct content without requiring reference-word matching.
+
+Apply all supplied fixed evaluation steps and scoring-band descriptions exactly as written. This clarification adds no evaluation steps, new criteria, score targets, weights, or scoring bands. Return only the requested score and explanation schema, with the score on the requested native scale; downstream normalization remains unchanged.
