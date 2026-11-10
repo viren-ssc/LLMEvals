@@ -1,0 +1,14 @@
+{
+  "status": "EXECUTION_AUTHORIZED",
+  "execution_authorized": true,
+  "authorized_by": "User: explicit three-model workbook queue instruction; scope bound to queue manifest",
+  "authorized_at": "2026-11-07T02:51:06.953594+00:00",
+  "authorization_statement": "I authorize run llama_mixed_temperature_workbook_c4_20261107_v2: 1,814 llama metric evaluations using the locked v2 configuration, labelled AI-provisional, pending calibration. This is execution permission only, not scientific or team approval.",
+  "experiment_sha256": "ae441f1acf4dfd312ae07116b6ed62040c8f612a05af7630bf84a6c9a84f4d75",
+  "run_id": "llama_mixed_temperature_workbook_c4_20261107_v2",
+  "scope": "One complete provisional experiment plus identical-configuration missing/failed-task resumption",
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false,
+  "result_label": "AI-provisional, pending calibration"
+}

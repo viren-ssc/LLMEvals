@@ -1,0 +1,8 @@
+{
+  "queue_manifest_sha256": "1dac8a0f402425b25b0a5a94278af835427f3f1bf170f933b69bae51937fed59",
+  "queue_execution_authorization_sha256": "88695f2fde3863cff6077c6bd789583a2233ee94795c61266fb6ca1875cedc80",
+  "source": "Explicit user workbook queue instruction",
+  "experiment_sha256": "ae441f1acf4dfd312ae07116b6ed62040c8f612a05af7630bf84a6c9a84f4d75",
+  "execution_permission_only": true,
+  "scientific_validity_approved": false
+}
