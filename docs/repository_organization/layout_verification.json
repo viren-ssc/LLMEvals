@@ -1,6 +1,8 @@
 {
-  "checked_links": 88,
+  "checked_links": 90,
   "broken_links": [],
+  "untracked_link_targets": [],
+  "git_index_checked": true,
   "completed_model_runs": 12,
   "retained_final_judgments": 20862,
   "no_judge_calls": true
