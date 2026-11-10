@@ -1,0 +1,234 @@
+{
+  "$defs": {
+    "EvidenceReview": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "unverified",
+          "enum": [
+            "verified",
+            "unverified",
+            "missing",
+            "not_required"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reference_answer_verified": {
+          "default": false,
+          "title": "Reference Answer Verified",
+          "type": "boolean"
+        },
+        "sufficient_for_metrics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sufficient For Metrics",
+          "type": "array"
+        },
+        "verified_by": {
+          "default": "",
+          "title": "Verified By",
+          "type": "string"
+        },
+        "verification_date": {
+          "default": "",
+          "title": "Verification Date",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "title": "EvidenceReview",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "question_id": {
+      "minLength": 1,
+      "title": "Question Id",
+      "type": "string"
+    },
+    "question": {
+      "minLength": 1,
+      "title": "Question",
+      "type": "string"
+    },
+    "model_answer": {
+      "minLength": 1,
+      "title": "Model Answer",
+      "type": "string"
+    },
+    "reference_answer": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reference Answer"
+    },
+    "reference_context": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reference Context",
+      "type": "array"
+    },
+    "source_urls": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Urls",
+      "type": "array"
+    },
+    "reference_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reference Ids",
+      "type": "array"
+    },
+    "applicable_metrics": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Applicable Metrics",
+      "type": "array"
+    },
+    "model_variant": {
+      "minLength": 1,
+      "title": "Model Variant",
+      "type": "string"
+    },
+    "provenance": {
+      "default": "unspecified",
+      "title": "Provenance",
+      "type": "string"
+    },
+    "illustrative": {
+      "default": false,
+      "title": "Illustrative",
+      "type": "boolean"
+    },
+    "expected_quality": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Quality"
+    },
+    "dataset_version": {
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "primary_metric": {
+      "title": "Primary Metric",
+      "type": "string"
+    },
+    "secondary_metrics": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Secondary Metrics",
+      "type": "array"
+    },
+    "evidence_review": {
+      "$ref": "#/$defs/EvidenceReview"
+    },
+    "case_family": {
+      "title": "Case Family",
+      "type": "string"
+    },
+    "synthetic": {
+      "default": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "development_example": {
+      "default": true,
+      "title": "Development Example",
+      "type": "boolean"
+    },
+    "intended_score_ranges": {
+      "additionalProperties": {
+        "items": {
+          "type": "number"
+        },
+        "type": "array"
+      },
+      "title": "Intended Score Ranges",
+      "type": "object"
+    },
+    "expected_behavior": {
+      "title": "Expected Behavior",
+      "type": "string"
+    },
+    "comparison_group": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Comparison Group"
+    },
+    "comparison_role": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Comparison Role"
+    },
+    "language": {
+      "default": "en",
+      "title": "Language",
+      "type": "string"
+    },
+    "system_prompt": {
+      "default": "Answer the user's question accurately and concisely.",
+      "title": "System Prompt",
+      "type": "string"
+    }
+  },
+  "required": [
+    "question_id",
+    "question",
+    "model_answer",
+    "applicable_metrics",
+    "model_variant",
+    "dataset_version",
+    "primary_metric",
+    "case_family",
+    "expected_behavior"
+  ],
+  "title": "CalibrationCase",
+  "type": "object"
+}

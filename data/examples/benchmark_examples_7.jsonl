@@ -1,0 +1,11 @@
+# LLMEvals — G-Eval v1/v2 judge calibration kit (2026-11-05)
+
+Contents:
+- `CODEX_PROMPT.md`: paste its contents into Codex from the root of your EXISTING LLMEvals project.
+- `rubrics/v1_20261103.json`: unchanged 2026-11-03 reference metric set.
+- `rubrics/v2_review_20261105.json`: proposed 2026-11-05 review draft, NOT an approved/frozen standard.
+- `calibration/benchmark_examples_7.jsonl`: seven real October discussion examples; reference answers are provisional and must be joined to current audited local records and evidence.
+
+Extract the zip into the LLMEvals project folder. Do not overwrite an existing file without inspecting it. Do not put LLM_KEY or .env in ChatGPT or Git. Then paste CODEX_PROMPT.md to Codex.
+
+No judge calls were executed when preparing this kit. They must run locally against your configured icelab gateway.

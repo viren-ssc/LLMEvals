@@ -1,0 +1,16 @@
+{
+  "description": "Answer-free projection of supplied benchmark fields; not a new independent original source or factual verification.",
+  "source": "data/incoming/cleaned_three_model/Canadian_ness_Three_Models_Cleaned_for_Evaluation.jsonl",
+  "source_sha256": "c5490703a827764f63e0ce436f098365fcec8c7981c362a7062bb32022344610",
+  "questions": 756,
+  "fields": [
+    "question_id",
+    "language",
+    "primary_metric",
+    "applicable_metrics",
+    "context_text",
+    "question",
+    "reference_answer"
+  ],
+  "output_sha256": "b1330838313a4756dbbb5016f6bcec5ff52292d6e85216711ecc4d1750f7c997"
+}
