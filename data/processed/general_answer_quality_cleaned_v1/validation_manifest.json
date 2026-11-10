@@ -1,0 +1,16 @@
+{
+  "status": "INPUT_VALIDATION_PASS",
+  "questions": 756,
+  "models": 3,
+  "selected_answer_strings_checked": 2268,
+  "unique_metric_tasks": 4536,
+  "source_answers_unchanged": true,
+  "shared_evidence_matches_benchmark": true,
+  "cross_model_fields_excluded": true,
+  "language_questions": {
+    "fr": 352,
+    "en": 404
+  },
+  "scoring_status": "BLOCKED_WAITING_FOR_USER_STEPS_AND_RUBRIC",
+  "judge_requests": 0
+}
