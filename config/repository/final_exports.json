@@ -1,0 +1,410 @@
+{
+  "description": "Explicit Git allowlist of final reporting exports; raw/checkpoint/log files remain local.",
+  "files": [
+    {
+      "path": "outputs/evaluations/llama_full_20261106_v2/full_results.xlsx",
+      "bytes": 3239020,
+      "sha256": "0f5cc6b0b796128e844ff405ed95e1fdff2240ba330269ee5ddce7d744a2f7fb"
+    },
+    {
+      "path": "outputs/evaluations/llama_full_20261106_v2/all_results.csv",
+      "bytes": 7198711,
+      "sha256": "332dd06d884eb9b2576eface08419f29b300b792ca295d0bb2de7a1af8be28c3"
+    },
+    {
+      "path": "outputs/evaluations/llama_full_20261106_v2/all_results.jsonl",
+      "bytes": 8266826,
+      "sha256": "44d96ad3113a09815b1bc8d7b13f13fb2223be2e2877b2c521f97efb331798f0"
+    },
+    {
+      "path": "outputs/evaluations/llama_full_20261106_v2/full_run_report.md",
+      "bytes": 7850,
+      "sha256": "c653efb39909ac48c96b6099884914bc4595738befdab686553bed3aadfa9e5e"
+    },
+    {
+      "path": "outputs/evaluations/llama_full_20261106_v2/full_run_summary.json",
+      "bytes": 2596,
+      "sha256": "c24a14f377ba5204f7ac39f34fc5d7385918a29d7702d087566d549052e24934"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_full_as_generated_20261106_v2/full_results.xlsx",
+      "bytes": 2725070,
+      "sha256": "b3eb0a67aa7d362e089727bd19314f7a4945df7809f1fb7e567acc5786d9f546"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_full_as_generated_20261106_v2/all_results.csv",
+      "bytes": 8671671,
+      "sha256": "27bc98809fe39359ffd40fb84b65c2c31dd3b5e7bace62e7fcd959b965ebe5ea"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_full_as_generated_20261106_v2/all_results.jsonl",
+      "bytes": 9738730,
+      "sha256": "883c6e9a5397880cd5e792de649d61328fe493d4d62e3ed38c7946c27876265b"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_full_as_generated_20261106_v2/full_run_report.md",
+      "bytes": 1808,
+      "sha256": "4d74baee8fb72f1f22475b34bb1d5273cd51abdd9fa593c941b7754c7962f56f"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_full_as_generated_20261106_v2/full_run_summary.json",
+      "bytes": 2584,
+      "sha256": "102e2b920ce9403554e75f9579da31d25fba8c1741894e52c5c2aadd35ee2d53"
+    },
+    {
+      "path": "outputs/evaluations/apertus_full_as_generated_c4_20261107_v2/full_results.xlsx",
+      "bytes": 3811260,
+      "sha256": "5f22ce2427569bf0e8e51a809f4c4028b6b3db9a7c5f87e958c93c5493883ac7"
+    },
+    {
+      "path": "outputs/evaluations/apertus_full_as_generated_c4_20261107_v2/all_results.csv",
+      "bytes": 9788899,
+      "sha256": "9a7d3344763585bf3a4d738665478f4000c83da0cf658656834586aca00ff5cf"
+    },
+    {
+      "path": "outputs/evaluations/apertus_full_as_generated_c4_20261107_v2/all_results.jsonl",
+      "bytes": 10886933,
+      "sha256": "5feb5d904b6464e8b0600e4851f87a1cac705c8a85769b53bb6c7931f6a535ff"
+    },
+    {
+      "path": "outputs/evaluations/apertus_full_as_generated_c4_20261107_v2/full_run_report.md",
+      "bytes": 1813,
+      "sha256": "7a5e57f2877e4113e4efa11a82106d7436446814339cf2a55bf6988d115f0f35"
+    },
+    {
+      "path": "outputs/evaluations/apertus_full_as_generated_c4_20261107_v2/full_run_summary.json",
+      "bytes": 2600,
+      "sha256": "a1eed7df429ab73a6e0536bd4d7bdfdd4de6c8900a1f25e420d7ca525ff2c288"
+    },
+    {
+      "path": "outputs/evaluations/llama_mixed_temperature_workbook_c4_20261107_v2/full_results.xlsx",
+      "bytes": 3265305,
+      "sha256": "954bb2ad49d5d567e065149dcddc948016a83acb56aae2cdc647159aebf9e104"
+    },
+    {
+      "path": "outputs/evaluations/llama_mixed_temperature_workbook_c4_20261107_v2/all_results.csv",
+      "bytes": 7475749,
+      "sha256": "a6f42f13f2967a585c0a3fdb1f3536cdfcfc27f827a396b673fa2f627f092867"
+    },
+    {
+      "path": "outputs/evaluations/llama_mixed_temperature_workbook_c4_20261107_v2/all_results.jsonl",
+      "bytes": 8529581,
+      "sha256": "2337fef1a971a51af97c777a6b9d3277f94c79e5ecdfa9032e968d2a68224c4e"
+    },
+    {
+      "path": "outputs/evaluations/llama_mixed_temperature_workbook_c4_20261107_v2/full_run_report.md",
+      "bytes": 1818,
+      "sha256": "a620f6d74152c1d69781d26b2069f7630d5bf3c128bf6c3f16c44939eaf4c0b3"
+    },
+    {
+      "path": "outputs/evaluations/llama_mixed_temperature_workbook_c4_20261107_v2/full_run_summary.json",
+      "bytes": 2561,
+      "sha256": "93940573c6291f5ecb793ba8f6c6e15cec666fca0f436599d43b2aaea86eb25d"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_mixed_temperature_workbook_c4_20261107_v2/full_results.xlsx",
+      "bytes": 3170590,
+      "sha256": "8c36c1e63c139f5bbf51223b61d79195a4ac80ceeb1ef1745dc9efc749ce835e"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_mixed_temperature_workbook_c4_20261107_v2/all_results.csv",
+      "bytes": 8722257,
+      "sha256": "661a6480561fe79b0fe1d927cfccafd513d148a29f588bda802d5fe293b31a23"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_mixed_temperature_workbook_c4_20261107_v2/all_results.jsonl",
+      "bytes": 9774774,
+      "sha256": "211b4bddd353ba4a15415a7c90cc776c950e7a3d6972db4e1587422ed438462c"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_mixed_temperature_workbook_c4_20261107_v2/full_run_report.md",
+      "bytes": 1820,
+      "sha256": "9b6d1afba31d82eee4e18a095091a6038807777664a99fe61ab61404a210463e"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_mixed_temperature_workbook_c4_20261107_v2/full_run_summary.json",
+      "bytes": 2563,
+      "sha256": "d73fb5793171cf498e02d12b524aa89fac18710d21cc001b4390d14d5d612aeb"
+    },
+    {
+      "path": "outputs/evaluations/apertus_mixed_temperature_workbook_c4_20261107_v2/full_results.xlsx",
+      "bytes": 4309184,
+      "sha256": "e101d0200613474fbdf32c9a87864d7a13b03a8dc19b0e5864d1636e50a5e0a0"
+    },
+    {
+      "path": "outputs/evaluations/apertus_mixed_temperature_workbook_c4_20261107_v2/all_results.csv",
+      "bytes": 10648342,
+      "sha256": "2fa45483506ff03792aa2f1b7645fae20eb1a33aebff8c9fc31feb78fdf766db"
+    },
+    {
+      "path": "outputs/evaluations/apertus_mixed_temperature_workbook_c4_20261107_v2/all_results.jsonl",
+      "bytes": 11769889,
+      "sha256": "4719c4a0ad40d8a0167b3f939825aaab257f74f0b277658af9665448d1b2964b"
+    },
+    {
+      "path": "outputs/evaluations/apertus_mixed_temperature_workbook_c4_20261107_v2/full_run_report.md",
+      "bytes": 1822,
+      "sha256": "259541bdba4b6b0a8d81033842f760400981b36a89c5c53b9a3b6c6f57680abd"
+    },
+    {
+      "path": "outputs/evaluations/apertus_mixed_temperature_workbook_c4_20261107_v2/full_run_summary.json",
+      "bytes": 2563,
+      "sha256": "4b638fc34f896b904d2d3dac93c9ef1bf55aa4b5c15d29e9ec764bf213944259"
+    },
+    {
+      "path": "outputs/evaluations/llama_cleaned_responses_c4_20261107_v2/full_results.xlsx",
+      "bytes": 3264874,
+      "sha256": "a6b6c8003725d6f9e477d4232e1bcea6994a440d322ec0ebcf266b1b494bdb08"
+    },
+    {
+      "path": "outputs/evaluations/llama_cleaned_responses_c4_20261107_v2/all_results.csv",
+      "bytes": 7448634,
+      "sha256": "e26ad0c26aa44b2b24f828d59df15f2b3665339ca999d51db0ecc8176f0bb1fb"
+    },
+    {
+      "path": "outputs/evaluations/llama_cleaned_responses_c4_20261107_v2/all_results.jsonl",
+      "bytes": 8502459,
+      "sha256": "6889ab54c7e72af95ba5954e453f5fa9c1d47a1abf19e98ec8c2af0b8fcdc8d7"
+    },
+    {
+      "path": "outputs/evaluations/llama_cleaned_responses_c4_20261107_v2/full_run_report.md",
+      "bytes": 1809,
+      "sha256": "74e00882de90d1ee0067bf15a2697bda8756894547169a2c54b775b0c3328c4c"
+    },
+    {
+      "path": "outputs/evaluations/llama_cleaned_responses_c4_20261107_v2/full_run_summary.json",
+      "bytes": 2599,
+      "sha256": "d4681e590a067f14d86d41da18e8a68393714fa48c01fb40604f6cca06238a8f"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_cleaned_responses_c4_20261107_v2/full_results.xlsx",
+      "bytes": 3117961,
+      "sha256": "bbd2252ab54c7c85eff84f58a5fb4e6f6257a188f05cc1ab09554a3624dc80c7"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_cleaned_responses_c4_20261107_v2/all_results.csv",
+      "bytes": 7505186,
+      "sha256": "67dd1d152fd90dc0b966adbda759826b4cfef985c11fd38a9c041c8d2bd2f053"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_cleaned_responses_c4_20261107_v2/all_results.jsonl",
+      "bytes": 8553319,
+      "sha256": "7885f0ae8fc4e01c2f5bdbcefac6d2062c43a6ca7cf3f14cebc8ddda803614fe"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_cleaned_responses_c4_20261107_v2/full_run_report.md",
+      "bytes": 1811,
+      "sha256": "956110ab978585962114ecf176c8f77c93fd6e3502654ef69f20b14d9362d439"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_cleaned_responses_c4_20261107_v2/full_run_summary.json",
+      "bytes": 2554,
+      "sha256": "27f7722f2e7b4ede774e02da3f10a70bd7f4a068f93019390e909c2db0582635"
+    },
+    {
+      "path": "outputs/evaluations/apertus_cleaned_responses_c4_20261107_v2/full_results.xlsx",
+      "bytes": 4299105,
+      "sha256": "292da2386985ccfaadc9e30a0203fd9117cada3ef63328ebe0945fed190ef751"
+    },
+    {
+      "path": "outputs/evaluations/apertus_cleaned_responses_c4_20261107_v2/all_results.csv",
+      "bytes": 10408404,
+      "sha256": "783f1ec3a549e13cf8d877436cec2399b82dd23261ce5a203d6fbcb461279269"
+    },
+    {
+      "path": "outputs/evaluations/apertus_cleaned_responses_c4_20261107_v2/all_results.jsonl",
+      "bytes": 11525217,
+      "sha256": "270aeeef8e6ba86db5f118ae737384d42848240100f075396889e1fc6184bbb6"
+    },
+    {
+      "path": "outputs/evaluations/apertus_cleaned_responses_c4_20261107_v2/full_run_report.md",
+      "bytes": 1813,
+      "sha256": "2606ab58ad2052392055fd2d035153f0967870648b6c430ad19f93955fccc860"
+    },
+    {
+      "path": "outputs/evaluations/apertus_cleaned_responses_c4_20261107_v2/full_run_summary.json",
+      "bytes": 2554,
+      "sha256": "a8647f89d00493d1997d27e5338e4362d03e1eed00a1d1371e0b1b113e82511b"
+    },
+    {
+      "path": "outputs/evaluations/llama_general_quality_cleaned_20261107_v1/full_results.xlsx",
+      "bytes": 2097495,
+      "sha256": "27b1df68a7d16d9835c1ac5f68557b57e2d8098df91e0e129eabfedd19a9fbb0"
+    },
+    {
+      "path": "outputs/evaluations/llama_general_quality_cleaned_20261107_v1/all_results.csv",
+      "bytes": 6317293,
+      "sha256": "b6a078731a4f5493dc4381c680b43d57bff93582ab0ef914cf54feb8a9f7158c"
+    },
+    {
+      "path": "outputs/evaluations/llama_general_quality_cleaned_20261107_v1/all_results.jsonl",
+      "bytes": 7283325,
+      "sha256": "4cef091961aeaaf63622200efcd0e7c1e684290ac8ff9a269d92053396a8b775"
+    },
+    {
+      "path": "outputs/evaluations/llama_general_quality_cleaned_20261107_v1/full_run_report.md",
+      "bytes": 1436,
+      "sha256": "04a444dda525eeb8005cbcc93af98017a0b3c8f812a6e008022b638996bb4b62"
+    },
+    {
+      "path": "outputs/evaluations/llama_general_quality_cleaned_20261107_v1/full_run_summary.json",
+      "bytes": 463,
+      "sha256": "8276e7e081563a31cb866d64f26c133ddaa862d00242fd86e804ed4874360319"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_general_quality_cleaned_20261107_v1/full_results.xlsx",
+      "bytes": 2113485,
+      "sha256": "6a89e508875ebd5ba790c4b1f3fe8156904a42f6cc856a585b3ab14e2ffa49d3"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_general_quality_cleaned_20261107_v1/all_results.csv",
+      "bytes": 6421264,
+      "sha256": "230183aff90fd7315f0e54de972ad6076cca0f2ec7c845eb657d021712da3195"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_general_quality_cleaned_20261107_v1/all_results.jsonl",
+      "bytes": 7383164,
+      "sha256": "5e4fd6fc056ebe8f0d56cd1e6c19ff5a77af8c1fb1c5f37adb4597758ad8d345"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_general_quality_cleaned_20261107_v1/full_run_report.md",
+      "bytes": 1438,
+      "sha256": "552925d0e0a636cfb65cdd6d3f9123b6c97c194ed5d99f8bd06667eca3d645ac"
+    },
+    {
+      "path": "outputs/evaluations/gc_llm_general_quality_cleaned_20261107_v1/full_run_summary.json",
+      "bytes": 463,
+      "sha256": "6cb7c964610b8d6b6df1d7c620e977cad1c07430df2817a45564d684ade5b13e"
+    },
+    {
+      "path": "outputs/evaluations/apertus_general_quality_cleaned_20261107_v1/full_results.xlsx",
+      "bytes": 2590391,
+      "sha256": "e167f99002c60d6646069f4c95fd8481b09d504b42fb06b3b345fa1cc9aeaecf"
+    },
+    {
+      "path": "outputs/evaluations/apertus_general_quality_cleaned_20261107_v1/all_results.csv",
+      "bytes": 8859499,
+      "sha256": "d696c9f4dc1cff269dfd7b1fb3176e375f44296977b44bd047ac6fed5112d530"
+    },
+    {
+      "path": "outputs/evaluations/apertus_general_quality_cleaned_20261107_v1/all_results.jsonl",
+      "bytes": 9877001,
+      "sha256": "0a64d694c73d142ddbc4f2204b2337375016ffb9584c98b6c6ce3e3970a3e7e7"
+    },
+    {
+      "path": "outputs/evaluations/apertus_general_quality_cleaned_20261107_v1/full_run_report.md",
+      "bytes": 1439,
+      "sha256": "13810b66b3535be2ccc43fc3f2292111822d4a62c5be0f08cd0d97b55b50fc27"
+    },
+    {
+      "path": "outputs/evaluations/apertus_general_quality_cleaned_20261107_v1/full_run_summary.json",
+      "bytes": 463,
+      "sha256": "ed5243df27aed9a82acee93431f63cdb6e89266a92ccdb0ad0f733903dbc5517"
+    },
+    {
+      "path": "outputs/comparisons/llama_temp0_temp07_cleaned_20261107/llama_temp0_temp07_cleaned_comparison.xlsx",
+      "bytes": 2893783,
+      "sha256": "a8496f00413ae357ee31a31d8508ce25d12d5ac54fa65f4087d6fa53c438a62d"
+    },
+    {
+      "path": "outputs/comparisons/llama_temp0_temp07_cleaned_20261107/report.md",
+      "bytes": 6407,
+      "sha256": "09fd97333ae6e1a99437c7b31403a253edc4d4bb95ff8de558ac6e090164cba2"
+    },
+    {
+      "path": "outputs/comparisons/llama_temp0_temp07_cleaned_20261107/comparison_manifest.json",
+      "bytes": 1591,
+      "sha256": "4ca44d03dba391a34fc5bd01835926054564e5b01c27bc97f51b9da5f38dde7b"
+    },
+    {
+      "path": "outputs/comparisons/llama_temp0_temp07_cleaned_20261107/metric_language_role_summaries.csv",
+      "bytes": 8973,
+      "sha256": "781a6afe40161c78b97f2929231e2f2bde5add5dac6c06e677b7eacf19fa5a50"
+    },
+    {
+      "path": "outputs/comparisons/gc_llm_previous_workbook_cleaned_20261107/gc_llm_three_run_comparison.xlsx",
+      "bytes": 3512721,
+      "sha256": "f7f9860b5b50642422956fcb927ea541ba21f83ac144a60c7248456f5a2aabeb"
+    },
+    {
+      "path": "outputs/comparisons/gc_llm_previous_workbook_cleaned_20261107/report.md",
+      "bytes": 6391,
+      "sha256": "25e3f2a2b80f34263e223c07c761d688e1a1e6c7f85209abe3432fa0a4d61be3"
+    },
+    {
+      "path": "outputs/comparisons/gc_llm_previous_workbook_cleaned_20261107/comparison_manifest.json",
+      "bytes": 1404,
+      "sha256": "ed8819d2d36534d1fc1fc0141f107cf34c42edb1639e5d7113f0afd777117348"
+    },
+    {
+      "path": "outputs/comparisons/gc_llm_previous_workbook_cleaned_20261107/metric_language_role_summaries.csv",
+      "bytes": 9335,
+      "sha256": "500609b85f0634c385ab71c25d4c45a8f10f6295a0d457aa2fff4b93cf6e115f"
+    },
+    {
+      "path": "outputs/comparisons/apertus_previous_workbook_cleaned_20261107/apertus_three_run_comparison.xlsx",
+      "bytes": 4699394,
+      "sha256": "8a9cae6d05623546658f79312640234d71b3325cc1c608330c035ec2df5b99a8"
+    },
+    {
+      "path": "outputs/comparisons/apertus_previous_workbook_cleaned_20261107/report.md",
+      "bytes": 5693,
+      "sha256": "499d0632d583f49c6428f4f0c949d419693a76ab8455ab15ffa1cbc190c8856d"
+    },
+    {
+      "path": "outputs/comparisons/apertus_previous_workbook_cleaned_20261107/comparison_manifest.json",
+      "bytes": 1295,
+      "sha256": "8de46707a8c54d2d8cd7a7b15ea27843206e8398a949135cbec6f22dafc0aece"
+    },
+    {
+      "path": "outputs/comparisons/apertus_previous_workbook_cleaned_20261107/metric_language_role_summaries.csv",
+      "bytes": 9483,
+      "sha256": "eec36ebb6e390454369584ce257f1d6ded2331e07d0812cc613135c4c82bb9f0"
+    },
+    {
+      "path": "outputs/queues/general_quality_cleaned_20261107_v1/three_model_general_quality_results.xlsx",
+      "bytes": 6180289,
+      "sha256": "88a06ae2fc3b3011d25027e9e3e8cbd522641ed4fdc5ea7c0df4af274c22863a"
+    },
+    {
+      "path": "outputs/queues/general_quality_cleaned_20261107_v1/all_three_model_results.csv",
+      "bytes": 21596996,
+      "sha256": "453b4cba181f189a2f972d33d1668903926c85f6bb0c1fdabfa422d61cfbe534"
+    },
+    {
+      "path": "outputs/queues/general_quality_cleaned_20261107_v1/all_three_model_results.jsonl",
+      "bytes": 24543490,
+      "sha256": "08e1390d61fa8818db1b936bef851523a3e183c70b6e3ffdf2aab4dfe46c0c8b"
+    },
+    {
+      "path": "outputs/queues/general_quality_cleaned_20261107_v1/question_metric_model_comparisons.csv",
+      "bytes": 12672166,
+      "sha256": "4ce882a6d60db0c6575d1deb150e7dae4137cd75d21410d4cd25537498801150"
+    },
+    {
+      "path": "outputs/queues/general_quality_cleaned_20261107_v1/question_metric_model_comparisons.jsonl",
+      "bytes": 13357903,
+      "sha256": "8cacb6bde67247de69ccf164a3aa4e4fe3f378d9a316cb26e2be2f3db1442b38"
+    },
+    {
+      "path": "outputs/queues/general_quality_cleaned_20261107_v1/three_model_metric_language_summaries.csv",
+      "bytes": 2398,
+      "sha256": "a0e9e462d5fa669fb71077513d53c9b25fdccfd24a42f745e58ec6c1571701a1"
+    },
+    {
+      "path": "outputs/queues/general_quality_cleaned_20261107_v1/three_model_metric_language_summaries.jsonl",
+      "bytes": 4855,
+      "sha256": "005d6d70753948f9199938238202cd679ab14d46d8f110cb9a64952874334aed"
+    },
+    {
+      "path": "outputs/queues/general_quality_cleaned_20261107_v1/final_report.md",
+      "bytes": 1414,
+      "sha256": "abdb2e81a1859b5d8b53801b3f8c1732f98c811bd6109b2478017cf576606105"
+    },
+    {
+      "path": "outputs/queues/general_quality_cleaned_20261107_v1/completion.json",
+      "bytes": 143,
+      "sha256": "54a733114fcfa0db78c4d6d6752e35b52933d1ad40a68911ad4dd606d3b95ca8"
+    }
+  ]
+}

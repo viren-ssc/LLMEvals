@@ -11,7 +11,7 @@ Run scripts from the repository root with `.\.venv\Scripts\python.exe scripts\<n
 | Full archive from canonical files | `package_three_experiments.py` (historical root-file assumptions; consult its paths before reuse) |
 | Rebuild navigation and small summaries | `build_repository_catalog.py` |
 | Preview/perform logged housekeeping | `organize_repository.py`, then `organize_repository.py --apply` |
-| Check navigation and retained final judgments | `verify_repository_layout.py` |
+| Check navigation, retained judgments and Git-visible links | `verify_repository_layout.py --git-index` |
 | Check Git-visible files for suspected secrets | `check_git_secrets.py` |
 | Development and historical diagnostics | Remaining calibration, isolation, concurrency, review and verification helpers |
 

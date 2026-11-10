@@ -5,6 +5,8 @@ This is a precaution, not a guarantee that every possible secret is detected.
 """
 import re
 import subprocess
+import io
+import zipfile
 from pathlib import Path
 
 from dotenv import dotenv_values
@@ -36,7 +38,11 @@ def main():
         if not p.is_file():
             continue
         data = p.read_bytes()
-        if any(secret in data for secret in secrets) or any(pattern.search(data) for pattern in PATTERNS):
+        payloads = [data]
+        if p.suffix.lower() in {'.xlsx', '.docx'}:
+            with zipfile.ZipFile(io.BytesIO(data)) as archive:
+                payloads.extend(archive.read(n) for n in archive.namelist() if n.endswith(('.xml', '.rels')))
+        if any(any(secret in item for secret in secrets) or any(pattern.search(item) for pattern in PATTERNS) for item in payloads):
             findings.append(name)
         if p.name == '.env' or (p.name.startswith('.env.') and p.name != '.env.example'):
             if name not in findings:

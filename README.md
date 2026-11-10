@@ -31,7 +31,7 @@ Start at **[Results index](results/README.md)**. All results are **AI-provisiona
 
 Each page links to Excel, every score/explanation, answered datasets and manifests. Temperature/checkpoint metadata is incomplete; GC LLM's workbook has **one reused temperature-0 answer**. See [interpretation limits](docs/experiment_interpretation.md).
 
-Outputs are ignored by Git by default. A source-only clone may need the separately shared authorized data/results bundle; preserve its folder paths when copying it into the desktop checkout.
+The linked final Excel, CSV and JSONL exports are included in Git through an explicit allowlist. Raw requests, logs and checkpoint folders remain ignored. Resuming a historical run requires those local checkpoints and protected pilot artifacts as a separately transferred bundle; the reporting exports alone are not a resume bundle.
 
 For the first commit/push and HPC checkout, see [Git and secret protection](docs/git_and_secrets.md).
 

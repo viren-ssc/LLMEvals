@@ -4,7 +4,7 @@ Git is initialized locally on `main`. The initial files are grouped into purpose
 
 ## Review and push
 
-Choose a repository with the intended access restrictions: supplied benchmark answers and reference evidence are included in Git-visible data. Runtime result folders under `outputs/` are deliberately excluded and must be transferred separately when needed.
+Choose a repository with the intended access restrictions: supplied benchmark answers, reference evidence and explicitly allowlisted final reporting exports are included in Git. Raw requests, logs, checkpoints and other runtime files under `outputs/` remain excluded and must be transferred separately for historical resume.
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\check_git_secrets.py
@@ -30,11 +30,11 @@ cd LLMEvals
 git pull --ff-only
 ```
 
-HPC can hold the code and data, but cannot reach this project's icelab judge. Evaluation still runs on an authorized normal desktop. Git does not transfer `.env`, `.venv` or ignored result files. Create a fresh environment and credential file only on the authorized judging desktop.
+HPC can hold the code, data and allowlisted reporting exports, but cannot reach this project's icelab judge. Evaluation still runs on an authorized normal desktop. Git does not transfer `.env`, `.venv` or ignored runtime files. Create a fresh environment and credential file only on the authorized judging desktop.
 
 ## Protections and limits
 
-- `.gitignore` excludes environment secrets, common credential directories, private keys, cloud/SSH state, local editor/agent state, caches, databases, logs and runtime results.
+- `.gitignore` excludes environment secrets, common credential directories, private keys, cloud/SSH state, local editor/agent state, caches, databases, logs and runtime results. Only the final reporting files listed in `config/repository/final_exports.json` are exempted from the outputs rule.
 - Only the reviewed blank `.env.example` is intentionally included.
 - `.gitattributes` disables line-ending normalization because frozen experiment hashes bind exact bytes. Do not remove that setting casually.
 - `scripts/check_git_secrets.py` checks tracked and untracked nonignored files for known local `.env` secrets and recognizable token/private-key patterns. It prints paths and counts, never matched values. It cannot guarantee detection of every secret or inspect Git history.

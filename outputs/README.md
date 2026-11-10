@@ -18,3 +18,9 @@ Start with **`full_results.xlsx`**, **`all_results.jsonl` / `all_results.csv`** 
 `records/` holds immutable metric attempts used for resume; `raw/` preserves judge responses; `sessions/` preserves request accounting. These are canonical records, not disposable caches. Some byte-identical worker copies can be removed without changing these canonical records.
 
 Historical paths remain because locked manifests and existing commands refer to them. Results indexes link here rather than creating another large copy. **All results are AI-provisional, pending calibration.**
+
+## GitHub and cloned repositories
+
+The final per-run Excel, CSV, JSONL and reports, plus selected combined comparison exports, are explicitly included in Git. Their inventory and hashes are in `config/repository/final_exports.json`. Other runtime files remain local/ignored. GitHub may not preview large CSV/JSONL files or Excel workbooks: open the file page and use **Download raw file**. A clone provides the actual files without relying on GitHub's preview.
+
+Final exports are sufficient for analysis, but not for checkpoint resume. Keep the original local runtime/checkpoint bundle separately if you need to resume/revalidate a historical experiment.

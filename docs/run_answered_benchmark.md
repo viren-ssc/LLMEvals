@@ -94,6 +94,8 @@ Ctrl+C stops that watcher only. Check failure counts: a finished process is not 
 
 These runners require 756 questions, 404 EN/352 FR, 756 primary and 1,058 secondary assignments. They are **not arbitrary-dataset importers**. Use [the run index](../results/run_index.csv) to select the exact model/condition.
 
+A Git clone includes the curated final reporting exports, not the raw/checkpoint/protected-pilot bundle. The check/resume commands below require that complete original runtime bundle at its historical paths. Do not use reporting exports as a substitute for successful metric checkpoints.
+
 Example: check/resume/export the completed cleaned GC LLM experiment:
 
 ```powershell
