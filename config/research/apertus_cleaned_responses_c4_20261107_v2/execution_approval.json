@@ -1,0 +1,14 @@
+{
+  "status": "EXECUTION_AUTHORIZED",
+  "execution_authorized": true,
+  "authorized_by": "User: explicit three-model cleaned JSONL queue request",
+  "authorized_at": "2026-11-07T03:56:16.703887+00:00",
+  "authorization_statement": "I authorize run apertus_cleaned_responses_c4_20261107_v2: 1,814 apertus metric evaluations using the locked v2 configuration, labelled AI-provisional, pending calibration. This is execution permission only, not scientific or team approval.",
+  "experiment_sha256": "4a5d9f865344fd29c738ee374db0a5ffb355d887a97420909e867a06ce156380",
+  "run_id": "apertus_cleaned_responses_c4_20261107_v2",
+  "scope": "One complete provisional experiment plus identical-configuration missing/failed-task resumption",
+  "scientific_validity_approved": false,
+  "team_approval": false,
+  "rubric_empirically_calibrated": false,
+  "result_label": "AI-provisional, pending calibration"
+}
